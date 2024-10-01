@@ -1012,6 +1012,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736471653}
   m_CullTransparentMesh: 1
+--- !u!1 &875704276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875704277}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &875704277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875704276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.4249535, y: -2.6841488, z: 6.7360897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1237430071}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958001290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1359,7 @@ RectTransform:
   - {fileID: 315568380}
   - {fileID: 674881150}
   - {fileID: 736471654}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 875704277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1517,7 +1549,7 @@ GameObject:
   - component: {fileID: 1621737529}
   - component: {fileID: 1621737528}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,12 +1570,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 42.988464, y: 25.247456, z: 1}
-  m_Center: {x: -0.7663498, y: 2.876512, z: 0}
+  m_Size: {x: 42.988464, y: 25.247456, z: 15.678027}
+  m_Center: {x: -0.7663498, y: 2.8765125, z: -8.765391}
 --- !u!4 &1621737529
 Transform:
   m_ObjectHideFlags: 0
@@ -1701,4 +1733,4 @@ SceneRoots:
   - {fileID: 530154836}
   - {fileID: 1953088238}
   - {fileID: 1621737529}
-  - {fileID: 1237430071}
+  - {fileID: 875704277}
