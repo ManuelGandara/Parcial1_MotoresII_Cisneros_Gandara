@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fruit
-  - Bomb
   - Blade
   - BottomTrigger
+  - Eye
+  - BadEye
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8024716276218649782}
   m_Layer: 0
   m_Name: BadEye
-  m_TagString: Bomb
+  m_TagString: BadEye
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
