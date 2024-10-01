@@ -5,8 +5,8 @@ using UnityEngine;
 public class Eyes : MonoBehaviour
 {
     private GameManager gm;
-    public GameObject slicedFruit;
-    public GameObject fruitJuice;
+    public GameObject slicedEye;
+    public GameObject EyeBlood;
     private float rotationForce = 200;
     private Rigidbody rb;
     public int scorePoints;
@@ -22,12 +22,12 @@ public class Eyes : MonoBehaviour
         transform.Rotate(Vector2.right * Time.deltaTime * rotationForce);
     }
 
-    private void InstantiateSlicedFruit()
+    private void InstantiateSlicedEye()
     {
-        GameObject instantiatedFruit = Instantiate(slicedFruit, transform.position, transform.rotation);
-        GameObject instantiatedJuice = Instantiate(fruitJuice, new Vector3(transform.position.x, transform.position.y, 0), fruitJuice.transform.rotation);
+        GameObject instantiatedEye = Instantiate(slicedEye, transform.position, transform.rotation);
+        GameObject instantiatedBlood = Instantiate(EyeBlood, new Vector3(transform.position.x, transform.position.y, 0), EyeBlood.transform.rotation);
 
-        Rigidbody[] slicedRb = instantiatedFruit.transform.GetComponentsInChildren<Rigidbody>();
+        Rigidbody[] slicedRb = instantiatedEye.transform.GetComponentsInChildren<Rigidbody>();
 
         foreach(Rigidbody srb in slicedRb)
         {
@@ -35,8 +35,8 @@ public class Eyes : MonoBehaviour
             srb.velocity = rb.velocity * 1.2f;
         }
 
-        Destroy(instantiatedFruit, 5);
-        Destroy(instantiatedJuice, 5);
+        Destroy(instantiatedEye, 5);
+        Destroy(instantiatedBlood, 5);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,7 +45,7 @@ public class Eyes : MonoBehaviour
         {
             gm.UpdateTheScore(scorePoints);
             Destroy(gameObject);
-            InstantiateSlicedFruit();
+            InstantiateSlicedEye();
         }
 
         if(other.tag == "BottomTrigger")

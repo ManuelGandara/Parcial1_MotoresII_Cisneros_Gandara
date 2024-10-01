@@ -5,7 +5,7 @@ using UnityEngine;
 public class BadEyes : MonoBehaviour
 {
     private float rotationForce = 200;
-    public ParticleSystem explosionParticle;
+    public ParticleSystem BadEyeParticle;
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class BadEyes : MonoBehaviour
         if(other.tag == "Blade")
         {
             Destroy(gameObject);
-            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            Instantiate(BadEyeParticle, transform.position, BadEyeParticle.transform.rotation);
             FindObjectOfType<GameManager>().GameOver();
         }
     }

@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00020db1dbf85e245a77c1aa3fdcb526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slicedFruit: {fileID: 8932669818646332545, guid: 839915d6562be814eb0d1d43855b8c8c, type: 3}
-  fruitJuice: {fileID: 80006230124857260, guid: 1576c9d000123654d99a732406c75020, type: 3}
+  slicedEye: {fileID: 8932669818646332545, guid: 839915d6562be814eb0d1d43855b8c8c, type: 3}
+  EyeBlood: {fileID: 80006230124857260, guid: 1576c9d000123654d99a732406c75020, type: 3}
   scorePoints: 10
 --- !u!1001 &8898287702647596337
 PrefabInstance:

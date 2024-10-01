@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd3e2dbeaa0ff448b8ddef2680a3b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionParticle: {fileID: 2973213231651848533, guid: 465372aead185214ca51a15bcde24c94, type: 3}
+  BadEyeParticle: {fileID: 2973213231651848533, guid: 465372aead185214ca51a15bcde24c94, type: 3}
 --- !u!1001 &2136286428669859701
 PrefabInstance:
   m_ObjectHideFlags: 0
