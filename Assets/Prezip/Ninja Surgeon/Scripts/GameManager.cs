@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     int lives;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
-    public TextMeshProUGUI gameOverText;
+    public Image gameOverImage;
     public Button restartButton;
     public bool gameIsOver;
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameIsOver = true;
-        gameOverText.gameObject.SetActive(true);
+        gameOverImage.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
     }
 
