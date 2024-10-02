@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     int score;
     int lives;
     public TextMeshProUGUI scoreText;
@@ -16,6 +18,19 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     public bool gameIsOver = false;
     public bool gameVictory = false;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -39,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateLives()
     {
-        if(gameIsOver == false)
+        if (gameIsOver == false)
         {
             lives--;
             livesText.text = "Lives: " + lives;
@@ -49,7 +64,6 @@ public class GameManager : MonoBehaviour
                 GameOver();
             }
         }
-        
     }
 
     public void GameOver()
@@ -69,4 +83,18 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void StopTime(float duration)
+    {
+        StartCoroutine(StopTimeCoroutine(duration));
+    }
+
+    private IEnumerator StopTimeCoroutine(float duration)
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1f;
+    }
 }
+
+
