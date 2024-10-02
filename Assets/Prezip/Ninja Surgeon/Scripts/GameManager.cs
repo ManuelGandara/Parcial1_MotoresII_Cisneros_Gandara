@@ -64,18 +64,22 @@ public class GameManager : MonoBehaviour
         gameIsOver = true;
         gameOverImage.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+
+        TimeManager.instance.StopTime(5f);
     }
 
     public void Victory()
-        {
-            gameVictory = true;
+    {
+        gameVictory = true;
 
-            if (gameVictoryImage != null)
-                gameVictoryImage.gameObject.SetActive(true);
+        if (gameVictoryImage != null)
+            gameVictoryImage.gameObject.SetActive(true);
 
-            if (menuButton != null)
-                menuButton.gameObject.SetActive(true);
-     }
+        if (menuButton != null)
+            menuButton.gameObject.SetActive(true);
+
+        TimeManager.instance.StopTime(5f);
+    }
 
     public void RestartTheGame()
     {
@@ -95,19 +99,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
-    public void StopTime(float duration)
-    {
-        StartCoroutine(StopTimeCoroutine(duration));
-    }
-
-    private IEnumerator StopTimeCoroutine(float duration)
-    {
-        Time.timeScale = 0f;
-        yield return new WaitForSecondsRealtime(duration);
-        Time.timeScale = 1f;
-    }
 }
+
 
 

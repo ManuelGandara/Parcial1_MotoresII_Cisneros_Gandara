@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IceCube : MonoBehaviour
 {
-    public float timeStopDuration = 5f;
+    public float timeStopDuration = 4f;
 
     private float rotationForce = 200;
     public ParticleSystem IceCubeParticle;
@@ -21,7 +21,36 @@ public class IceCube : MonoBehaviour
             Destroy(gameObject);
             Instantiate(IceCubeParticle, transform.position, IceCubeParticle.transform.rotation);
 
-            GameManager.instance.StopTime(timeStopDuration);
+            StartCoroutine(FreezeObjectives());
+        }
+    }
+
+    private IEnumerator FreezeObjectives()
+    {
+        GameObject[] objectives = GameObject.FindGameObjectsWithTag("Objective");
+
+        foreach (GameObject obj in objectives)
+        {
+            if (obj.TryGetComponent(out Rigidbody rb))
+            {
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.useGravity = false;
+                rb.constraints = RigidbodyConstraints.FreezePosition;
+            }
+        }
+
+        yield return new WaitForSeconds(timeStopDuration);
+
+        foreach (GameObject obj in objectives)
+        {
+            if (obj.TryGetComponent(out Rigidbody rb))
+            {
+                rb.constraints = RigidbodyConstraints.None;
+                rb.useGravity = true;
+            }
         }
     }
 }
+
+

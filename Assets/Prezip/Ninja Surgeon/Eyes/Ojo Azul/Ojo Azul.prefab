@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3774848696587470173}
   m_Layer: 0
   m_Name: Ojo Azul
-  m_TagString: Eye
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicedEye: {fileID: 8932669818646332545, guid: 839915d6562be814eb0d1d43855b8c8c, type: 3}
   EyeBlood: {fileID: 6640286792523491213, guid: f081033d183789646898abd2899f327f, type: 3}
-  scorePoints: 25
+  scorePoints: 10
 --- !u!1001 &8898287702647596337
 PrefabInstance:
   m_ObjectHideFlags: 0
