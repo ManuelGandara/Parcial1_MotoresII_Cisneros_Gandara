@@ -12,13 +12,23 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public Image gameOverImage;
+    public Image gameVictoryImage;
     public Button restartButton;
-    public bool gameIsOver;
+    public bool gameIsOver = false;
+    public bool gameVictory = false;
 
     void Start()
     {
         score = 0;
         lives = 3;
+    }
+
+    private void Update()
+    {
+        if (score >= 300)
+        {
+            Victory();
+        }
     }
 
     public void UpdateTheScore(int scorePointsToAdd)
@@ -47,6 +57,12 @@ public class GameManager : MonoBehaviour
         gameIsOver = true;
         gameOverImage.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+    }
+
+    public void Victory()
+    {
+        gameVictory = true;
+        gameVictoryImage.gameObject.SetActive(true);
     }
 
     public void RestartTheGame()
