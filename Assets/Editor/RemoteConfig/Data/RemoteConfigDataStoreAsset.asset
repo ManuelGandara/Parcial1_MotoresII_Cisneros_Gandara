@@ -12,36 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e8ea446a-df2a-4dbc-a768-19802d37780c\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6df8b5ff-01af-4007-aa4c-4a1d269b0e88\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
-    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"9f9bc731-6984-4c39-a820-05f96f72c9e6\"\r\n    },\r\n   
+    \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"da1226dc-42c0-4ff4-9716-8160c486f584\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"1a93f1ca-ca68-48f3-b053-3f7a4f9dd8af\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"8f5982b0-f78d-4928-ad7b-5cafd0ae36b9\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
     \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"4b855ae3-9293-4e1f-be89-7ad54729d775\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"f185bafe-c51d-4c97-9e20-d2df4d884429\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"864d66b8-274c-433f-8657-a3c4034ee15c\"\r\n   
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d37c871c-ea83-4012-b3d6-83ae33374de0\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
-    \"string\",\r\n      \"value\": \"Estamos trabajando en los errores del sistema\"\r\n   
-    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e8ea446a-df2a-4dbc-a768-19802d37780c\"\r\n   
+    \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6df8b5ff-01af-4007-aa4c-4a1d269b0e88\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
-    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"9f9bc731-6984-4c39-a820-05f96f72c9e6\"\r\n    },\r\n   
+    \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"da1226dc-42c0-4ff4-9716-8160c486f584\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"1a93f1ca-ca68-48f3-b053-3f7a4f9dd8af\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"8f5982b0-f78d-4928-ad7b-5cafd0ae36b9\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
     \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"4b855ae3-9293-4e1f-be89-7ad54729d775\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"f185bafe-c51d-4c97-9e20-d2df4d884429\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"864d66b8-274c-433f-8657-a3c4034ee15c\"\r\n   
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d37c871c-ea83-4012-b3d6-83ae33374de0\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
-    \"string\",\r\n      \"value\": \"Estamos trabajando en los errores del sistema\"\r\n   
-    }\r\n  }\r\n]"
+    \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"7394f8cb-5c58-4a92-909d-5efecfaeec4b\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"0bb9b94b-46b3-48aa-8e0a-48bc2e8f2f5d\",\r\n   
     \"isDefault\": true,\r\n    \"createdAt\": \"2024-10-02T02:26:44Z\",\r\n    \"updatedAt\":
