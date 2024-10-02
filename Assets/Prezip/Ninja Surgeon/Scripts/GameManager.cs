@@ -93,6 +93,8 @@ public class GameManager : MonoBehaviour
     public void RestartTheGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameIsOver = false;
+        gameVictory = false;
     }
 
     public void StopTime(float duration)
