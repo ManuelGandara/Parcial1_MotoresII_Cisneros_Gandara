@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f770b0258d8b834438926bbc7f3ca9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStopDuration: 5
+  timeStopDuration: 3
   IceCubeParticle: {fileID: 2973213231651848533, guid: 5debff089934d4b4d9afb6e0665e0e4c, type: 3}
 --- !u!1001 &5381105554737686047
 PrefabInstance:

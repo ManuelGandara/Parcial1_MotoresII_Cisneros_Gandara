@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI livesText;
     public Image gameOverImage;
     public Image gameVictoryImage;
-    public Button restartButton;
+    public Image restartButton;
+    public Image menuButton;
     public bool gameIsOver = false;
     public bool gameVictory = false;
 
@@ -66,6 +67,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void GameOver()
     {
         gameIsOver = true;
@@ -74,10 +80,15 @@ public class GameManager : MonoBehaviour
     }
 
     public void Victory()
-    {
-        gameVictory = true;
-        gameVictoryImage.gameObject.SetActive(true);
-    }
+        {
+            gameVictory = true;
+
+            if (gameVictoryImage != null)
+                gameVictoryImage.gameObject.SetActive(true);
+
+            if (menuButton != null)
+                menuButton.gameObject.SetActive(true);
+     }
 
     public void RestartTheGame()
     {

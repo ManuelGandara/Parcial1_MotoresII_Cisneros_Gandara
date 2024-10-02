@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicedEye: {fileID: 8932669818646332545, guid: 839915d6562be814eb0d1d43855b8c8c, type: 3}
-  EyeBlood: {fileID: 80006230124857260, guid: 1576c9d000123654d99a732406c75020, type: 3}
+  EyeBlood: {fileID: 6640286792523491213, guid: f081033d183789646898abd2899f327f, type: 3}
   scorePoints: 25
 --- !u!1001 &8898287702647596337
 PrefabInstance:
