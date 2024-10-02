@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e8ea446a-df2a-4dbc-a768-19802d37780c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"9f9bc731-6984-4c39-a820-05f96f72c9e6\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"1a93f1ca-ca68-48f3-b053-3f7a4f9dd8af\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"4b855ae3-9293-4e1f-be89-7ad54729d775\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"864d66b8-274c-433f-8657-a3c4034ee15c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"Estamos trabajando en los errores del sistema\"\r\n   
+    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e8ea446a-df2a-4dbc-a768-19802d37780c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"9f9bc731-6984-4c39-a820-05f96f72c9e6\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"1a93f1ca-ca68-48f3-b053-3f7a4f9dd8af\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"4b855ae3-9293-4e1f-be89-7ad54729d775\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"864d66b8-274c-433f-8657-a3c4034ee15c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"Estamos trabajando en los errores del sistema\"\r\n   
+    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"7394f8cb-5c58-4a92-909d-5efecfaeec4b\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"0bb9b94b-46b3-48aa-8e0a-48bc2e8f2f5d\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2024-10-02T02:26:44Z\",\r\n    \"updatedAt\":
+    \"2024-10-02T02:26:44Z\"\r\n  }\r\n]"
