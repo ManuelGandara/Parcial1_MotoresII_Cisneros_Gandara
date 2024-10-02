@@ -20,19 +20,6 @@ public class GameManager : MonoBehaviour
     public bool gameIsOver = false;
     public bool gameVictory = false;
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     void Start()
     {
         score = 0;
@@ -92,10 +79,23 @@ public class GameManager : MonoBehaviour
 
     public void RestartTheGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        score = 0;
+        lives = 3;
         gameIsOver = false;
         gameVictory = false;
+
+        scoreText.text = score.ToString();
+        livesText.text = "Lives: " + lives;
+
+        gameOverImage.gameObject.SetActive(false);
+        gameVictoryImage.gameObject.SetActive(false);
+
+        restartButton.gameObject.SetActive(false);
+        menuButton.gameObject.SetActive(false);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 
     public void StopTime(float duration)
     {
