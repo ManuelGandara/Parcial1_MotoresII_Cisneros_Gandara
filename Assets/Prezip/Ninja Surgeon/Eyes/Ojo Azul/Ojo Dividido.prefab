@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8080530861983021088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ojo Dividido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,6 +89,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ojo_Arriba
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -96,9 +100,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2996713067539684522}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5210776559829569406}
   m_SourcePrefab: {fileID: 100100000, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
 --- !u!1 &570151397096592944 stripped
 GameObject:
@@ -132,27 +133,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &5210776559829569406
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570151397096592944}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 576.78687, y: 576.78687, z: 377.10214}
-  m_Center: {x: 0, y: -0.000017166138, z: 0.00006103516}
 --- !u!4 &910365942571256970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
@@ -214,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ojo_Abajo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0beb63a4af5adfe41a19a496931b0601, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -221,9 +205,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0beb63a4af5adfe41a19a496931b0601, type: 3}
       insertIndex: -1
       addedObject: {fileID: 315050330903314144}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0beb63a4af5adfe41a19a496931b0601, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3054796440400593948}
   m_SourcePrefab: {fileID: 100100000, guid: 0beb63a4af5adfe41a19a496931b0601, type: 3}
 --- !u!1 &5834031820289664320 stripped
 GameObject:
@@ -257,27 +238,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &3054796440400593948
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5834031820289664320}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 576.78687, y: 576.7869, z: 377.10202}
-  m_Center: {x: -0.0000019073486, y: -0.000030517578, z: -0.000015258787}
 --- !u!4 &6610569206591176698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0beb63a4af5adfe41a19a496931b0601, type: 3}

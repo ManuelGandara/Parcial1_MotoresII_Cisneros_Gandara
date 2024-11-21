@@ -121,12 +121,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.012905402
-  m_Center: {x: 0, y: -5.5463287e-18, z: -0.0037284077}
+  m_Radius: 3.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-8024716276218649782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,31 +150,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7268364
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7615407
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0000010681152
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
