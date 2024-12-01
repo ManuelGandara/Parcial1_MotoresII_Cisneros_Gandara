@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class StoreDisplay : MonoBehaviour
 {
-    [Header("Stamina Text")]
+    [Header("Store Text")]
     [SerializeField] private TextMeshProUGUI _currencyText;
     [SerializeField] private TextMeshProUGUI _itemsBoughtText;
 
-    void Start()
+    void Awake()
     {
         StoreManager.Instance.OnStoreStatusUpdate += OnStoreStatusUpdate;
     }
