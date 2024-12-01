@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4346331986434975621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af54952a39313f545957031d7c0a7164, type: 3}
+  m_Script: {fileID: 11500000, guid: d64ca7616c4dcd44ba9c42f21a1631a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _staminaPref: Stamina
