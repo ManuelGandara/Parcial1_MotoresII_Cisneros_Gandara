@@ -23,7 +23,7 @@ public class StaminaTestController : MonoBehaviour
         {
             Debug.Log("Borro Stamina");
 
-            StaminaStore.Instance.DeletePersistedStamina();
+            StaminaStorage.Instance.DeletePersistedStamina();
         }
     }
 }

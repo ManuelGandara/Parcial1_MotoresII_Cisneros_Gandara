@@ -32,7 +32,7 @@ public class StaminaManager : MonoBehaviour
 
     void Start()
     {
-        _stamina = StaminaStore.Instance.LoadStamina(_maxStamina);
+        _stamina = StaminaStorage.Instance.LoadStamina(_maxStamina);
 
         StartCoroutine(AutoRechargeStamina());
     }

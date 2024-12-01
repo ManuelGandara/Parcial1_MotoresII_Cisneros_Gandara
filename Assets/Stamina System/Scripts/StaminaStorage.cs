@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
 
-public class StaminaStore : MonoBehaviour
+public class StaminaStorage : MonoBehaviour
 {
     [Header("Player Prefs")]
     [SerializeField] private string _staminaPref = "Stamina";
     [SerializeField] private string _nextStaminaTimePref = "NextStaminaTime";
     [SerializeField] private string _lastStaminaTimePref = "LastStaminaTime";
 
-    public static StaminaStore Instance;
+    public static StaminaStorage Instance;
 
     void Awake()
     {
