@@ -6,9 +6,8 @@ public class JSONStorage<T>
 {
     private string _path;
     private string _passKey;
-    private T _defaultData;
 
-    public JSONStorage(string fileName, T defaultData, string passKey = "admin1234")
+    public JSONStorage(string fileName, string passKey = "admin1234")
     {
         string folderPath = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments).Replace("\\", "/")}/{Application.productName}";
 
@@ -18,8 +17,6 @@ public class JSONStorage<T>
         _path = $"{folderPath}/{fileName}.json";
 
         _passKey = passKey;
-
-        _defaultData = defaultData;
     }
 
     public void Persist(T data)
@@ -31,9 +28,14 @@ public class JSONStorage<T>
         File.WriteAllText(_path, encryptedJson);
     }
 
-    public T Load()
+    public T Load(T defaultData)
     {
-        if (!File.Exists(_path)) throw new Exception($"{_path} File Not Found");
+        if (FileDoesNotExist())
+        {
+            Persist(defaultData);
+
+            return defaultData;
+        }
 
         string encryptedJson = File.ReadAllText(_path);
 
@@ -42,16 +44,21 @@ public class JSONStorage<T>
         return JsonUtility.FromJson<T>(json);
     }
 
-    public void Delete(bool hardDelete = false)
+    public void Delete()
     {
-        if (hardDelete && File.Exists(_path))
-        {
-            File.Delete(_path);
-        }
-        else
-        {
-            Persist(_defaultData);
-        }
+        CheckIfDirectoryExists();
+
+        File.Delete(_path);
+    }
+
+    private bool FileDoesNotExist()
+    {
+        return !File.Exists(_path);
+    }
+
+    private void CheckIfDirectoryExists()
+    {
+        if (FileDoesNotExist()) throw new Exception($"{_path} File Not Found");
     }
 
     private string EncryptDecrypt(string data)

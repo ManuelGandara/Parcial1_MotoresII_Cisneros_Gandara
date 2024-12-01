@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class EyeSkinItem : StoreItem
+public class EyeSkinItem : UnitaryStoreItem
 {
-    [SerializeField] private int _obtainedStamina;
+    [Header("Eye Color")]
+    [SerializeField] private Color _eyeColor;
 
     public override void Obtain()
     {

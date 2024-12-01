@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class StoreManager : MonoBehaviour
 {
+    [Header("Store Status")]
+    [SerializeField] private StoreItem[] _storeItems = new StoreItem[0];
     private StoreStatus _storeStatus;
+
+    [Header("Default Values")]
+    [SerializeField] private int _defaultCurrency = 100;
+    [SerializeField] private UnitaryStoreItem[] _defaultUnitaryItemsBought = new UnitaryStoreItem[] { };
+    StoreStatus _defaultStoreStatus;
 
     public delegate void StoreStatusUpdate(StoreStatus storeStatus);
 
@@ -25,10 +32,20 @@ public class StoreManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
-        _storeStatus = StoreStorage.Instance.LoadStoreStatus();
+        _defaultStoreStatus = new StoreStatus()
+        {
+            Currency = _defaultCurrency,
+            UnitaryItemsBought = _defaultUnitaryItemsBought.Select(item => item.Id).ToArray()
+        };
+
+        _storeStatus = StoreStorage.Instance.LoadStoreStatus(_defaultStoreStatus);
+
+        OnStoreStatusUpdate(_storeStatus);
     }
+
+    public StoreStatus StoreStatus { get { return _storeStatus; } }
 
     public int Currency { get { return _storeStatus.Currency; } }
 

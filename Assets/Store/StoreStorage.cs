@@ -4,13 +4,9 @@ public class StoreStorage : MonoBehaviour
 {
     [Header("Storage Settings")]
     [SerializeField] private string _fileName = "Store";
-    [SerializeField] private bool _hardDelete = false;
+    [SerializeField] private bool _useSoftDelete = true;
     JSONStorage<StoreStatus> _storage;
-
-    [Header("Default Values")]
-    [SerializeField] private int _defaultCurrency = 100;
-    [SerializeField] private string[] _defaultUnitaryItemsBought = new string[] { };
-    StoreStatus _defaultData;
+    StoreStatus _defaultStatus;
 
     public static StoreStorage Instance;
 
@@ -24,13 +20,7 @@ public class StoreStorage : MonoBehaviour
         {
             Instance = this;
 
-            _defaultData = new StoreStatus()
-            {
-                Currency = _defaultCurrency,
-                UnitaryItemsBought = _defaultUnitaryItemsBought
-            };
-
-            _storage = new JSONStorage<StoreStatus>(_fileName, _defaultData);
+            _storage = new JSONStorage<StoreStatus>(_fileName);
 
             DontDestroyOnLoad(this);
         }
@@ -38,21 +28,30 @@ public class StoreStorage : MonoBehaviour
 
     void Start()
     {
-        StoreManager.Instance.OnStoreStatusUpdate += PersistCurrency;
+        StoreManager.Instance.OnStoreStatusUpdate += PersistStoreStatus;
     }
 
-    public StoreStatus LoadStoreStatus()
+    public StoreStatus LoadStoreStatus(StoreStatus defaultStatus)
     {
-        return _storage.Load();
+        _defaultStatus = defaultStatus;
+
+        return _storage.Load(defaultStatus);
     }
 
-    public void PersistCurrency(StoreStatus storeStatus)
+    public void PersistStoreStatus(StoreStatus storeStatus)
     {
         _storage.Persist(storeStatus);
     }
 
     public void DeletedPersistedStoreStatus()
     {
-        _storage.Delete(_hardDelete);
+        if (_useSoftDelete && _defaultStatus != null)
+        {
+            _storage.Persist(_defaultStatus);
+        }
+        else
+        {
+            _storage.Delete();
+        }
     }
 }

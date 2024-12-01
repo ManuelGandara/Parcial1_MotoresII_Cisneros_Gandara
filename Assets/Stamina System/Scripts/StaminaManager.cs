@@ -34,6 +34,8 @@ public class StaminaManager : MonoBehaviour
     {
         _stamina = StaminaStorage.Instance.LoadStamina(_maxStamina);
 
+        OnStaminaUpdate(_stamina);
+
         StartCoroutine(AutoRechargeStamina());
     }
 
