@@ -18,5 +18,12 @@ public class StaminaTestController : MonoBehaviour
 
             StaminaManager.Instance.ConsumeStamina(10);
         }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Debug.Log("Borro Stamina");
+
+            StaminaStore.Instance.DeletePersistedStamina();
+        }
     }
 }

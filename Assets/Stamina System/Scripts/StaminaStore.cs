@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StaminaStore : MonoBehaviour
@@ -41,7 +39,7 @@ public class StaminaStore : MonoBehaviour
         };
     }
 
-    private void PersistStamina(Stamina stamina)
+    public void PersistStamina(Stamina stamina)
     {
         PlayerPrefs.SetInt(_staminaPref, stamina.Amount);
 
@@ -50,6 +48,19 @@ public class StaminaStore : MonoBehaviour
         PlayerPrefs.SetString(_lastStaminaTimePref, stamina.LastUpdateTime.ToString());
 
         PlayerPrefs.Save();
+    }
+
+    public void DeletePersistedStamina()
+    {
+        PlayerPrefs.DeleteKey(_staminaPref);
+
+        PlayerPrefs.DeleteKey(_nextStaminaTimePref);
+
+        PlayerPrefs.DeleteKey(_lastStaminaTimePref);
+
+        PlayerPrefs.Save();
+
+        StaminaManager.Instance.OnStaminaUpdate -= PersistStamina;
     }
 
     private DateTime StringToDateTime(string date)
