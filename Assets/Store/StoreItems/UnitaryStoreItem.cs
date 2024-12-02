@@ -7,8 +7,6 @@ public abstract class UnitaryStoreItem : StoreItem
     public UnitaryStoreItem(string id, string name, string emoji, int cost, Color bgColor) : base(name, emoji, cost, bgColor)
     {
         _id = id;
-
-        if (WasSold()) Obtain();
     }
 
     public string Id { get { return _id; } }
@@ -23,8 +21,13 @@ public abstract class UnitaryStoreItem : StoreItem
         StoreManager.Instance.PurchaseUnitaryItem(this);
     }
 
-    private bool WasSold()
+    public bool WasSold()
     {
         return StoreManager.Instance.DidSell(_id);
+    }
+
+    public void TryObtain()
+    {
+        if (WasSold()) Obtain();
     }
 }

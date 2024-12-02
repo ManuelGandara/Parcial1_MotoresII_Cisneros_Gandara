@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class StoreManager : MonoBehaviour
 {
-    private List<StoreItem> _storeItems;
-    private StoreStatus _storeStatus;
+    List<StoreItem> _storeItems;
+    List<UnitaryStoreItem> _unitaryStoreItems;
+    StoreStatus _storeStatus;
 
     [Header("Default Values")]
     [SerializeField] private int _defaultCurrency = 100;
@@ -42,16 +43,7 @@ public class StoreManager : MonoBehaviour
 
         _storeStatus = StoreStorage.Instance.LoadStoreStatus(_defaultStoreStatus);
 
-        _storeItems = new List<StoreItem>()
-            {
-                new StaminaItem("10 Stamina", "10 St", 20, Color.blue, 10),
-                new StaminaItem("50 Stamina", "50 St", 100, Color.blue, 50),
-                new StaminaItem("100 Stamina", "100 St", 300, Color.blue, 100),
-                new BladeColorItem("green_blade_color", "Green Blade Color", "<==|-", 20, Color.green, Color.green),
-                new BladeColorItem("red_blade_color", "Red Blade Color", "<==|-", 20, Color.red, Color.red),
-                new EyeSkinItem("yellow_eye_skin", "Yellow Eye Skin", "ò_ó", 30, Color.yellow, Color.yellow),
-                new EyeSkinItem("cyan_eye_skin", "Cyan Eye Skin", "ò_ó", 30, Color.cyan, Color.cyan)
-            };
+        InitializeStoreItems();
 
         OnStoreStatusUpdate(_storeStatus);
     }
@@ -96,5 +88,30 @@ public class StoreManager : MonoBehaviour
         _storeStatus.Currency = Mathf.Max(_storeStatus.Currency + amount, 0);
 
         OnStoreStatusUpdate(_storeStatus);
+    }
+
+    private void InitializeStoreItems()
+    {
+        _unitaryStoreItems = new ()
+            {
+                new BladeColorItem("green_blade_color", "Green Blade Color", "<==|-", 20, Color.green, Color.green),
+                new BladeColorItem("red_blade_color", "Red Blade Color", "<==|-", 20, Color.red, Color.red),
+                new EyeSkinItem("yellow_eye_skin", "Yellow Eye Skin", "ò_ó", 30, Color.yellow, Color.yellow),
+                new EyeSkinItem("cyan_eye_skin", "Cyan Eye Skin", "ò_ó", 30, Color.cyan, Color.cyan)
+            };
+
+        foreach (UnitaryStoreItem unitaryStoreItem in _unitaryStoreItems)
+        {
+            unitaryStoreItem.TryObtain();
+        }
+
+        List<StoreItem> storeItems = new()
+            {
+                new StaminaItem("10 Stamina", "10 St", 20, Color.blue, 10),
+                new StaminaItem("50 Stamina", "50 St", 100, Color.blue, 50),
+                new StaminaItem("100 Stamina", "100 St", 300, Color.blue, 100),
+            };
+
+        _storeItems = storeItems.Concat(_unitaryStoreItems).ToList();
     }
 }
