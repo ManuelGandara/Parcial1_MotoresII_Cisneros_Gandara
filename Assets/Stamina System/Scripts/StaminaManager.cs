@@ -67,6 +67,11 @@ public class StaminaManager : MonoBehaviour
         UpdateStamina(rechargedAmount);
     }
 
+    public void ResetStamina()
+    {
+        UpdateStamina(_maxStamina);
+    }
+
     private void UpdateStamina(int amount)
     {
         _stamina.Amount = Mathf.Clamp(_stamina.Amount + amount, 0, _maxStamina);

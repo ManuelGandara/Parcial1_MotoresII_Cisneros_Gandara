@@ -41,11 +41,7 @@ public class StoreManager : MonoBehaviour
             UnitaryItemsBought = _defaultUnitaryItemsBought.Select(item => item.Id).ToList(),
         };
 
-        _storeStatus = StoreStorage.Instance.LoadStoreStatus(_defaultStoreStatus);
-
         InitializeStoreItems();
-
-        OnStoreStatusUpdate(_storeStatus);
     }
 
     public StoreStatus StoreStatus { get { return _storeStatus; } }
@@ -83,6 +79,13 @@ public class StoreManager : MonoBehaviour
         PurchaseItem(unitaryStoreItem);
     }
 
+    public void ResetStore()
+    {
+        StoreStorage.Instance.DeletedPersistedStoreStatus();
+
+        InitializeStoreItems();
+    }
+
     private void UpdateCurrency(int amount)
     {
         _storeStatus.Currency = Mathf.Max(_storeStatus.Currency + amount, 0);
@@ -92,6 +95,8 @@ public class StoreManager : MonoBehaviour
 
     private void InitializeStoreItems()
     {
+        _storeStatus = StoreStorage.Instance.LoadStoreStatus(_defaultStoreStatus);
+
         _unitaryStoreItems = new ()
             {
                 new BladeColorItem("green_blade_color", "Green Blade Color", "<==|-", 20, Color.green, Color.green),
@@ -113,5 +118,7 @@ public class StoreManager : MonoBehaviour
             };
 
         _storeItems = storeItems.Concat(_unitaryStoreItems).ToList();
+
+        OnStoreStatusUpdate(_storeStatus);
     }
 }
