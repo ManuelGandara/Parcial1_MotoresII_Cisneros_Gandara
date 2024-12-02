@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class StaminaItem : StoreItem
 {
-    [Header("Effect Attributes")]
-    [SerializeField] private int _obtainedStamina;
+    int _obtainedStamina;
+
+    public StaminaItem(string name, string emoji, int cost, Color bgColor, int obtainedStamina) : base(name, emoji, cost, bgColor)
+    {
+        _obtainedStamina = obtainedStamina;
+    }
 
     public override void Obtain()
     {

@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class EyeSkinItem : UnitaryStoreItem
 {
-    [Header("Eye Color")]
-    [SerializeField] private Color _eyeColor;
+    Color _eyeColor;
+
+    public EyeSkinItem(string id, string name, string emoji, int cost, Color bgColor, Color eyeColor) : base(id, name, emoji, cost, bgColor)
+    {
+        _eyeColor = eyeColor;
+    }
 
     public override void Obtain()
     {
-        // Debería cambiar el skin de los ojos
+        Debug.Log($"Cambie color de los ojos a {_eyeColor}"); // Debería cambiar el material de los ojos
     }
 }

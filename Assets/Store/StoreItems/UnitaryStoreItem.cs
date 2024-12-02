@@ -2,19 +2,29 @@ using UnityEngine;
 
 public abstract class UnitaryStoreItem : StoreItem
 {
-    [SerializeField] private string _id;
+    string _id;
 
-    protected override void Start()
+    public UnitaryStoreItem(string id, string name, string emoji, int cost, Color bgColor) : base(name, emoji, cost, bgColor)
     {
-        base.Start();
+        _id = id;
 
-        if (StoreManager.Instance.DidSell(_id)) Obtain();
+        if (WasSold()) Obtain();
     }
 
     public string Id { get { return _id; } }
 
     public override bool CanBuy(int currentCurrency)
     {
-        return base.CanBuy(currentCurrency) && StoreManager.Instance.DidSell(_id);
+        return base.CanBuy(currentCurrency) && WasSold();
+    }
+
+    public override void Purchase()
+    {
+        StoreManager.Instance.PurchaseUnitaryItem(this);
+    }
+
+    private bool WasSold()
+    {
+        return StoreManager.Instance.DidSell(_id);
     }
 }
