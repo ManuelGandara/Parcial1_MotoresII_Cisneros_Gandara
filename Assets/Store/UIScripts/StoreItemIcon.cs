@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,32 +11,84 @@ public class StoreItemIcon : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _emojiText;
     [SerializeField] private TextMeshProUGUI _costText;
+    [SerializeField] private Button _selectItemButton;
 
     StoreItem _storeItem;
+    StoreItemsDisplay _storeItemsDisplay;
+    Transform _gridLayout;
 
-    public void Configure(StoreItem storeItem, Transform gridLayout)
+    public void Configure(StoreItem storeItem, Transform gridLayout, StoreItemsDisplay storeItemsDisplay)
     {
         _storeItem = storeItem;
 
-        _emojiText.text = storeItem.Emoji;
+        _gridLayout = gridLayout;
 
-        _costText.text = storeItem.Cost.ToString();
+        _storeItemsDisplay = storeItemsDisplay;
 
-        _nameText.text = storeItem.Name;
+        ConfigureText();
 
-        _background.color = storeItem.BGColor;
+        ConfigureImages();
 
-        _highlightImage.gameObject.SetActive(false);
+        ConfigureTransform();
 
-        transform.SetParent(gridLayout);
+        ConfigureButtons();
 
-        transform.localScale = Vector3.one;
-
-        gameObject.name = storeItem.Name;
+        ConfigureSubscriptions();
     }
 
-    public virtual bool CanBuy()
+    public void UpdateSelection(StoreItem selectedStoreItem)
     {
-        return _storeItem.CanBuy(StoreManager.Instance.Currency);
+        _highlightImage.gameObject.SetActive(selectedStoreItem == _storeItem);
+    }
+
+    private void ConfigureText()
+    {
+        _emojiText.text = _storeItem.Emoji;
+
+        _costText.text = _storeItem.Cost.ToString();
+
+        _nameText.text = _storeItem.Name;
+
+        gameObject.name = _storeItem.Name;
+    }
+
+    private void ConfigureImages()
+    {
+        _background.color = _storeItem.BGColor;
+
+        _highlightImage.gameObject.SetActive(false);
+    }
+
+    private void ConfigureTransform()
+    {
+        transform.SetParent(_gridLayout);
+
+        transform.localScale = Vector3.one;
+    }
+
+    private void ConfigureButtons()
+    {
+        _selectItemButton.onClick.AddListener(() => _storeItemsDisplay.SelectStoreItem(_storeItem));
+
+        _selectItemButton.interactable = _storeItem.CanBuy();
+    }
+
+    private void ConfigureSubscriptions()
+    {
+        _storeItemsDisplay.OnStoreItemSelect += OnItemSelect;
+
+        StoreManager.Instance.OnStoreStatusUpdate += OnPurchase;
+    }
+
+    private void OnItemSelect(StoreItem storeItem)
+    {
+        _highlightImage.gameObject.SetActive(_storeItem == storeItem);
+    }
+
+    private void OnPurchase(StoreStatus storeStatus)
+    {
+        _selectItemButton.interactable = _storeItem.CanBuy();
+
+        _highlightImage.gameObject.SetActive(false);
     }
 }

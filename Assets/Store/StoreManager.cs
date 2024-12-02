@@ -44,11 +44,11 @@ public class StoreManager : MonoBehaviour
 
         _storeItems = new List<StoreItem>()
             {
-                new CurrencyItem("10 Stamina", "10 St", 20, Color.yellow, 10),
-                new CurrencyItem("50 Stamina", "50 St", 100, Color.yellow, 50),
-                new CurrencyItem("100 Stamina", "100 St", 250, Color.yellow, 100),
-                new BladeColorItem("green_blade_color", "Green Blade Color", "<==|-", 30, Color.green, Color.green),
-                new BladeColorItem("red_blade_color", "Red Blade Color", "<==|-", 30, Color.red, Color.red),
+                new StaminaItem("10 Stamina", "10 St", 20, Color.blue, 10),
+                new StaminaItem("50 Stamina", "50 St", 100, Color.blue, 50),
+                new StaminaItem("100 Stamina", "100 St", 300, Color.blue, 100),
+                new BladeColorItem("green_blade_color", "Green Blade Color", "<==|-", 20, Color.green, Color.green),
+                new BladeColorItem("red_blade_color", "Red Blade Color", "<==|-", 20, Color.red, Color.red),
                 new EyeSkinItem("yellow_eye_skin", "Yellow Eye Skin", "ò_ó", 30, Color.yellow, Color.yellow),
                 new EyeSkinItem("cyan_eye_skin", "Cyan Eye Skin", "ò_ó", 30, Color.cyan, Color.cyan)
             };
@@ -79,6 +79,8 @@ public class StoreManager : MonoBehaviour
 
     public void PurchaseItem(StoreItem storeItem)
     {
+        storeItem.Obtain();
+
         SpendCurrency(storeItem.Cost);
     }
 

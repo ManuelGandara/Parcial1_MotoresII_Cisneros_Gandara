@@ -14,7 +14,7 @@ public class StoreDisplay : MonoBehaviour
 
     private void OnStoreStatusUpdate(StoreStatus storeStatus)
     {
-        string itemsBoughtText = storeStatus.UnitaryItemsBought.Count > 0 ? string.Join(",", storeStatus.UnitaryItemsBought) : "N/A";
+        string itemsBoughtText = storeStatus.UnitaryItemsBought.Count > 0 ? string.Join(", ", storeStatus.UnitaryItemsBought) : "N/A";
 
         _currencyText.text = $"Currency: ${storeStatus.Currency}";
         

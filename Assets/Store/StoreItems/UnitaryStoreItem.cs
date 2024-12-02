@@ -13,9 +13,9 @@ public abstract class UnitaryStoreItem : StoreItem
 
     public string Id { get { return _id; } }
 
-    public override bool CanBuy(int currentCurrency)
+    public override bool CanBuy()
     {
-        return base.CanBuy(currentCurrency) && WasSold();
+        return base.CanBuy() && !WasSold();
     }
 
     public override void Purchase()

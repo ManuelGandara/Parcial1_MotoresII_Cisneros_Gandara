@@ -1789,6 +1789,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _storeItemIconPrefab: {fileID: 3560338561209012576, guid: 10706a8058c189e42bb50a4c173e9e46, type: 3}
   _gridLayout: {fileID: 809590181}
+  _buyButton: {fileID: 1977004691}
+  _closeButton: {fileID: 256850279}
 --- !u!1 &938635496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,7 +2540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.990566, g: 0.82313544, b: 0.7896493, a: 0.7529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

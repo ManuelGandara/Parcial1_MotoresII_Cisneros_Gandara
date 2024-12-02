@@ -157,8 +157,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -263,6 +263,7 @@ MonoBehaviour:
   _nameText: {fileID: 7611034664721279044}
   _emojiText: {fileID: 4942616791152480060}
   _costText: {fileID: 1382506177706732936}
+  _selectItemButton: {fileID: 66846040079982909}
 --- !u!1 &3229723146080708720
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1553618539151347190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -321,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95371556, g: 0.9622642, b: 0.7126202, a: 0.1254902}
+  m_Color: {r: 0.95371556, g: 0.9622642, b: 0.7126202, a: 0.2509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -485,7 +486,7 @@ GameObject:
   - component: {fileID: 8718384387230930642}
   - component: {fileID: 66846040079982909}
   m_Layer: 5
-  m_Name: BuyButton
+  m_Name: SelectButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,7 +589,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8718384387230930642}
   m_OnClick:
     m_PersistentCalls:

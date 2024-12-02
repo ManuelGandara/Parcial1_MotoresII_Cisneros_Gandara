@@ -6,5 +6,5 @@ public class StoreStatus
 {
     public int Currency = 0;
 
-    public List<string> UnitaryItemsBought = new ();
+    public List<string> UnitaryItemsBought = new();
 }

@@ -23,9 +23,9 @@ public abstract class StoreItem
 
     public Color BGColor { get { return _bgColor; } }
 
-    public virtual bool CanBuy(int currentCurrency)
+    public virtual bool CanBuy()
     {
-        return currentCurrency >= _cost;
+        return StoreManager.Instance.Currency >= _cost;
     }
 
     public virtual void Purchase()

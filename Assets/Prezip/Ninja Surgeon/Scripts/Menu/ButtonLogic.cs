@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Button : MonoBehaviour
+public class ButtonLogic : MonoBehaviour
 {
 
     public void Play()
