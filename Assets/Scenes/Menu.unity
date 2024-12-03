@@ -1018,6 +1018,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256850277}
   m_CullTransparentMesh: 1
+--- !u!1 &313894090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313894092}
+  - component: {fileID: 313894091}
+  m_Layer: 0
+  m_Name: AdsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &313894091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313894090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f45a43dea62524ebde6b8534f06cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameId: 5741969
+  _adId: Ninja_Surgeon_Rewarded_Ad
+--- !u!4 &313894092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313894090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.537792, y: 12.354623, z: 93.48368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316876238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +4410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxStamina: 100
-  _secondsToRechargeStamina: 1
+  _secondsToRechargeStamina: 10
 --- !u!4 &4720492400373437360
 Transform:
   m_ObjectHideFlags: 0
@@ -4414,9 +4460,10 @@ SceneRoots:
   - {fileID: 93633040}
   - {fileID: 316876240}
   - {fileID: 585067499}
-  - {fileID: 1415714155}
-  - {fileID: 1959731418}
-  - {fileID: 1470497088}
+  - {fileID: 313894092}
   - {fileID: 4720492400373437360}
   - {fileID: 510028299}
   - {fileID: 498074538}
+  - {fileID: 1415714155}
+  - {fileID: 1959731418}
+  - {fileID: 1470497088}

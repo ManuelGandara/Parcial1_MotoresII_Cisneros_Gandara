@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public Image menuButton;
     public bool gameIsOver = false;
     public bool gameVictory = false;
+    public int currencyPerWin = 10;
+    public int staminaPerPlay = 10;
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if (score >= 300)
         {
-            Victory();
+            Victory(); // Saquen esto del loop porque si no el player va a ganar plata infinita porque está corriendo en el Update
         }
     }
 
@@ -66,6 +68,8 @@ public class GameManager : MonoBehaviour
         restartButton.gameObject.SetActive(true);
 
         TimeManager.instance.StopTime(5f);
+
+        AdsManager.Instance.ShowAd();
     }
 
     public void Victory()
@@ -77,6 +81,8 @@ public class GameManager : MonoBehaviour
 
         if (menuButton != null)
             menuButton.gameObject.SetActive(true);
+
+        StoreManager.Instance.ObtainCurrency(currencyPerWin);
 
         TimeManager.instance.StopTime(5f);
     }
@@ -96,6 +102,8 @@ public class GameManager : MonoBehaviour
 
         restartButton.gameObject.SetActive(false);
         menuButton.gameObject.SetActive(false);
+
+        StaminaManager.Instance.ConsumeStamina(staminaPerPlay);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

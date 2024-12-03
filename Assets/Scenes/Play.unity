@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: vidas 3
+  m_text: lives 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
   m_sharedMaterial: {fileID: -2702654793625633834, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
@@ -480,6 +480,8 @@ MonoBehaviour:
   menuButton: {fileID: 1582270886}
   gameIsOver: 0
   gameVictory: 0
+  currencyPerWin: 10
+  staminaPerPlay: 10
 --- !u!4 &530154836
 Transform:
   m_ObjectHideFlags: 0

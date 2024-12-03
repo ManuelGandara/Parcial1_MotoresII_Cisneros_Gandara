@@ -8,7 +8,7 @@ public class StaminaDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nextUpdateText;
     [SerializeField] private TextMeshProUGUI _lastUpdateText;
 
-    void Awake()
+    void Start()
     {
         StaminaManager.Instance.OnStaminaUpdate += UpdateStaminaDisplay;
     }

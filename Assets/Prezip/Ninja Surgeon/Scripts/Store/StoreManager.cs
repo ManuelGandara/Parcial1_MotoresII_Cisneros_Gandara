@@ -6,6 +6,7 @@ public class StoreManager : MonoBehaviour
 {
     List<StoreItem> _storeItems;
     List<UnitaryStoreItem> _unitaryStoreItems;
+    List<StoreItem> _rewardStoreItems;
     StoreStatus _storeStatus;
 
     [Header("Default Values")]
@@ -36,10 +37,12 @@ public class StoreManager : MonoBehaviour
     void Start()
     {
         _defaultStoreStatus = new StoreStatus()
-        {
-            Currency = _defaultCurrency,
-            UnitaryItemsBought = _defaultUnitaryItemsBought.Select(item => item.Id).ToList(),
-        };
+            {
+                Currency = _defaultCurrency,
+                UnitaryItemsBought = _defaultUnitaryItemsBought.Select(item => item.Id).ToList(),
+            };
+
+        ConfigureRewards();
 
         InitializeStoreItems();
     }
@@ -92,6 +95,15 @@ public class StoreManager : MonoBehaviour
 
         OnStoreStatusUpdate(_storeStatus);
     }
+    
+    private void ObtainReward()
+    {
+        StoreItem reward = _rewardStoreItems[Random.Range(0, _rewardStoreItems.Count)];
+
+        Debug.Log($"Obtuviste {reward.Name}"); // Tendría que mostrarse mejor en pantalla
+
+        reward.Obtain();
+    }
 
     private void InitializeStoreItems()
     {
@@ -120,5 +132,16 @@ public class StoreManager : MonoBehaviour
         _storeItems = storeItems.Concat(_unitaryStoreItems).ToList();
 
         OnStoreStatusUpdate(_storeStatus);
+    }
+
+    private void ConfigureRewards()
+    {
+        _rewardStoreItems = new()
+            {
+                new StaminaItem("10 Stamina", "10 St", 20, Color.blue, 10),
+                new CurrencyItem("10 Coins", "$10", 0, Color.white, 10),
+            };
+
+        AdsManager.Instance.OnGrantReward += ObtainReward;
     }
 }
