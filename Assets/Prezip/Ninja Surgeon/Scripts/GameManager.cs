@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
         TimeManager.instance.StopTime(5f);
 
         AdsManager.Instance.ShowAd();
+
     }
 
     public void Victory()

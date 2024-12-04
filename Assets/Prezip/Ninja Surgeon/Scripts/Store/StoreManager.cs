@@ -103,11 +103,18 @@ public class StoreManager : MonoBehaviour
     
     private void ObtainReward()
     {
+
         StoreItem reward = _rewardStoreItems[Random.Range(0, _rewardStoreItems.Count)];
 
-        Debug.Log($"Obtuviste {reward.Name}"); // Tendría que mostrarse mejor en pantalla
+        if (StaminaManager.Instance.CurrentStamina.Amount == 0)
+        {
+            reward = _rewardStoreItems[0];
+        }
+
+        Debug.Log($"Obtuviste {reward.Name}");
 
         reward.Obtain();
+
     }
 
     private void InitializeStoreItems()
