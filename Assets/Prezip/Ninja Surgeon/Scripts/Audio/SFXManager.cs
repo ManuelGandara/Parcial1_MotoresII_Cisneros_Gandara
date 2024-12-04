@@ -1,16 +1,17 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
-public class MusicManager : MonoBehaviour
+public class SFXManager : MonoBehaviour
 {
-    public static MusicManager Instance;
+    public static SFXManager Instance;
 
     [Header("Audio")]
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _clips;
+    [SerializeField] private AudioClip[] _clips;
 
     private void Awake()
     {
@@ -38,16 +39,15 @@ public class MusicManager : MonoBehaviour
         _audioMixer.SetFloat(group.ToString(), Mathf.Log10(Mathf.Max(0.0001f, value)) * 25);
     }
 
-    public void PlayClip(AudioClip clip)
+    public void PlayClip(int index)
     {
         if (_audioSource.isPlaying)
         {
             _audioSource.Stop();
         }
 
-        _audioSource.clip = clip;
+        _audioSource.clip = _clips[index];
 
         _audioSource.Play();
     }
 }
-

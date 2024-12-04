@@ -44,6 +44,7 @@ public class Eyes : MonoBehaviour
         if(other.tag == "Blade")
         {
             gm.UpdateTheScore(scorePoints);
+            SFXManager.Instance.PlayClip(0);
             Destroy(gameObject);
             InstantiateSlicedEye();
         }

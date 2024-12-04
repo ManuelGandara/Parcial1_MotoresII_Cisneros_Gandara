@@ -19,6 +19,7 @@ public class IceCube : MonoBehaviour
         if (other.tag == "Blade")
         {
             Destroy(gameObject);
+            SFXManager.Instance.PlayClip(0);
             Instantiate(IceCubeParticle, transform.position, IceCubeParticle.transform.rotation);
 
             StartCoroutine(FreezeObjectives());

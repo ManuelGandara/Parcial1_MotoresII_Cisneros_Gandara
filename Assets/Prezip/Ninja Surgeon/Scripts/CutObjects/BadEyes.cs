@@ -17,6 +17,7 @@ public class BadEyes : MonoBehaviour
         if(other.tag == "Blade")
         {
             Destroy(gameObject);
+            SFXManager.Instance.PlayClip(1);
             Instantiate(BadEyeParticle, transform.position, BadEyeParticle.transform.rotation);
             FindObjectOfType<GameManager>().GameOver();
         }

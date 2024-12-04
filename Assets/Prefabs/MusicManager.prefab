@@ -175,3 +175,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 0}
   _audioSource: {fileID: 0}
+  _cutClip: {fileID: 8300000, guid: 8ca10b1f79da2e14aa974e857a96578d, type: 3}
