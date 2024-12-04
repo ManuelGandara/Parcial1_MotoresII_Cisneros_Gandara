@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StoreItemIcon : MonoBehaviour
 {
     [Header("Display")]
+    [SerializeField] public int size;
     [SerializeField] private Image _background;
     [SerializeField] private Image _highlightImage;
     [SerializeField] private TextMeshProUGUI _nameText;
@@ -63,7 +64,7 @@ public class StoreItemIcon : MonoBehaviour
     {
         transform.SetParent(_gridLayout);
 
-        transform.localScale = Vector3.one;
+        transform.localScale = Vector3.one * size;
     }
 
     private void ConfigureButtons()

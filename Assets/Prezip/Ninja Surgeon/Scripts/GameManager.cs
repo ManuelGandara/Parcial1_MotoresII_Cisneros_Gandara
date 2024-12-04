@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Image gameVictoryImage;
     public Image restartButton;
     public Image menuButton;
+    public bool currencyBool;
     public bool gameIsOver = false;
     public bool gameVictory = false;
     public int currencyPerWin = 10;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         if (score >= 300)
         {
-            Victory(); // Saquen esto del loop porque si no el player va a ganar plata infinita porque está corriendo en el Update
+            Victory(); 
         }
     }
 
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
     public void Victory()
     {
         gameVictory = true;
-
+        currencyBool = true;
         if (gameVictoryImage != null)
             gameVictoryImage.gameObject.SetActive(true);
 

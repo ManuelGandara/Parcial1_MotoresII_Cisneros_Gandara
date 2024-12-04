@@ -55,7 +55,12 @@ public class StoreManager : MonoBehaviour
 
     public void ObtainCurrency(int amount)
     {
-        UpdateCurrency(amount);
+        if (GameManager.instance.currencyBool == true)
+        {
+            UpdateCurrency(amount);
+            GameManager.instance.currencyBool = false;
+        }
+        
     }
 
     public void SpendCurrency(int amount)
