@@ -8,9 +8,9 @@ public class MusicManager : MonoBehaviour
     public static MusicManager Instance;
 
     [Header("Audio")]
-    [SerializeField] private AudioMixer _audioMixer;
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _clips;
+    [SerializeField] public AudioMixer _audioMixer;
+    [SerializeField] public AudioSource _audioSource;
+    [SerializeField] public AudioClip _clips;
 
     private void Awake()
     {
@@ -35,6 +35,8 @@ public class MusicManager : MonoBehaviour
 
     public void SetVolume(MixerGroup group, float value)
     {
+        _audioSource.volume = value;
+
         _audioMixer.SetFloat(group.ToString(), Mathf.Log10(Mathf.Max(0.0001f, value)) * 25);
     }
 

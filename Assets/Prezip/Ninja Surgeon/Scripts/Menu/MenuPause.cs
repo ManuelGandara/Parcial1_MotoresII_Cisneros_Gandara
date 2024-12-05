@@ -16,11 +16,13 @@ public class MenuPausa : MonoBehaviour
     {
         Pausepanel.SetActive(true);
         Time.timeScale = 0;
+        Debug.Log("pausa");
     }
 
     public void Continue()
     {
         Pausepanel.SetActive(false);
         Time.timeScale = 1;
+        Debug.Log("Continue");
     }
 }
