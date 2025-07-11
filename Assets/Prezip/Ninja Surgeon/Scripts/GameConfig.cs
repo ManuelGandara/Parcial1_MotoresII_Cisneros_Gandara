@@ -9,7 +9,8 @@ using TMPro;
 
 public class GameConfig : MonoBehaviour
 {
-    public struct userAttributes { }
+    public struct UserAttributes { }
+
     public struct AppAttributes { }
 
     [SerializeField] GameObject ServerOutPanel;
@@ -22,6 +23,7 @@ public class GameConfig : MonoBehaviour
     {
         startProcess();
     }
+
     async void startProcess()
     {
         if (Utilities.CheckForInternetConnection())
@@ -32,8 +34,10 @@ public class GameConfig : MonoBehaviour
         {
 
         }
+
         RemoteConfigService.Instance.FetchCompleted += Fetch;
-        RemoteConfigService.Instance.FetchConfigs(new userAttributes(), new AppAttributes());
+
+        RemoteConfigService.Instance.FetchConfigs(new UserAttributes(), new AppAttributes());
     }
 
     async Task initializeRemoteConfig()

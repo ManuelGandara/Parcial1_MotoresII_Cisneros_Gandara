@@ -1,0 +1,12 @@
+public struct RemoteConfigValues
+{
+    public bool ServerIsOut;
+
+    public string ServerInfo;
+
+    public int Version;
+
+    public float Patch;
+
+    public string VersionText;
+}

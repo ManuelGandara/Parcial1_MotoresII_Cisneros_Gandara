@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +19,5 @@ public class VolumeManager : MonoBehaviour
     public void SetMasterVolume(float value)
     {
         MusicManager.Instance.SetVolume(MixerGroup.MasterVolume, value);
-
-        Debug.Log(value);
     }
 }
