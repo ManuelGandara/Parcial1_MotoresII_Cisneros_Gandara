@@ -1,22 +1,43 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartupCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject _loadingComponent;
     [SerializeField] private GameObject _serverOutPanel;
-    [SerializeField] private GameObject _startButton;
+    [SerializeField] private Button _startButton;
+    [SerializeField] private Slider _progressBar;
+
+    MenuLoader _menuLoader;
+
+    void Awake()
+    {
+        _menuLoader = GetComponent<MenuLoader>();
+    }
 
     void Start()
     {
-        RemoteConfigManager.Instance.OnRemoteConfigLoad += DisplayButtonsOnRemoteConfigLoad;
+        RemoteConfigManager.Instance.OnRemoteConfigLoad += DisplayRemoteConfigValues;
+
+        _menuLoader.OnLoadStart += DisplayLoadingComponents;
+
+        _menuLoader.OnProgressUpdate += UpdateProgressBar;
+
+        _startButton.onClick.AddListener(_menuLoader.LoadMenu);
+
+        _loadingComponent.SetActive(true);
+
+        _serverOutPanel.SetActive(false);
+
+        _startButton.gameObject.SetActive(false);
     }
 
     void OnDestroy()
     {
-        RemoteConfigManager.Instance.OnRemoteConfigLoad -= DisplayButtonsOnRemoteConfigLoad;
+        RemoteConfigManager.Instance.OnRemoteConfigLoad -= DisplayRemoteConfigValues;
     }
 
-    void DisplayButtonsOnRemoteConfigLoad()
+    void DisplayRemoteConfigValues()
     {
         _loadingComponent.SetActive(false);
 
@@ -26,7 +47,21 @@ public class StartupCanvas : MonoBehaviour
         }
         else
         {
-            _startButton.SetActive(true);
+            _startButton.gameObject.SetActive(true);
         }
+    }
+
+    void DisplayLoadingComponents()
+    {
+        _loadingComponent.SetActive(true);
+
+        _progressBar.gameObject.SetActive(true);
+
+        _startButton.gameObject.SetActive(false);
+    }
+
+    void UpdateProgressBar(float progress)
+    {
+        _progressBar.value = progress + 0.1f;
     }
 }

@@ -1,27 +1,19 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MenuLoader : MonoBehaviour
 {
-    [Header("Linked Scenes")]
     [SerializeField] private string _mainMenuScene = "Menu";
 
-    [Header("UI")]
-    [SerializeField] private GameObject _loadingPanel;
-    [SerializeField] private Button _startButton;
+    public event Action OnLoadStart = delegate { };
 
-    void Start()
+    public event Action<float> OnProgressUpdate = delegate { };
+
+    public void LoadMenu()
     {
-        _startButton.onClick.AddListener(LoadMenu);
-    }
-
-    void LoadMenu()
-    {
-        _loadingPanel.SetActive(true);
-
-        _startButton.gameObject.SetActive(false);
+        OnLoadStart();
 
         StartCoroutine(LoadMenuAsync());
     }
@@ -34,6 +26,8 @@ public class MenuLoader : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
+            OnProgressUpdate(asyncLoad.progress);
+
             if (asyncLoad.progress >= 0.9f)
             {
                 asyncLoad.allowSceneActivation = true;

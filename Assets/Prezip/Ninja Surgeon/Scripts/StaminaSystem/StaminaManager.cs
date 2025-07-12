@@ -7,6 +7,7 @@ public class StaminaManager : MonoBehaviour
     [Header("Stamina")]
     [SerializeField] private int _maxStamina;
     [SerializeField] private float _secondsToRechargeStamina;
+
     bool _isNotRechargingStamina;
     Stamina _stamina;
 

@@ -1,12 +1,10 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsShowListener
+public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsShowListener, IRequiredForStartup
 {
     [SerializeField] private string _gameId = "5741969";
     [SerializeField] string _adId = "Ninja_Surgeon_Rewarded_Ad";
-
-    EmptyUnityAdsLoadListener _emptyUnityAdsLoadListener = new();
 
     public delegate void GrantReward();
 
@@ -28,9 +26,14 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
         }
     }
 
-    private void Start()
+    void Start()
     {
         Advertisement.Initialize(_gameId, true, this);
+    }
+
+    public bool IsReady()
+    {
+        return Advertisement.isInitialized;
     }
 
     public void ShowAd()
@@ -42,7 +45,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
     public void OnInitializationComplete()
     {
-        Advertisement.Load(_adId, _emptyUnityAdsLoadListener);
+        Advertisement.Load(_adId, new EmptyUnityAdsLoadListener());
     }
 
     public void OnUnityAdsShowStart(string placementId)

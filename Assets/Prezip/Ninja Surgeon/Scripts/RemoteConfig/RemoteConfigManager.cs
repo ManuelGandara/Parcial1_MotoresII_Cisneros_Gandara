@@ -4,7 +4,7 @@ using Unity.Services.Core;
 using Unity.Services.RemoteConfig;
 using UnityEngine;
 
-public class RemoteConfigManager : MonoBehaviour
+public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
 {
     [Header("Remote Config Keys")]
     [SerializeField] private string _serviceOutKey = "Bool_ServiceOut";
@@ -19,7 +19,7 @@ public class RemoteConfigManager : MonoBehaviour
 
     public struct AppAttributes { }
 
-    public bool IsReady { get; private set; } = false;
+    bool _isReady = false;
 
     public RemoteConfigValues RemoteConfigValues;
 
@@ -42,6 +42,11 @@ public class RemoteConfigManager : MonoBehaviour
     void Start()
     {
         StartProcess();
+    }
+
+    public bool IsReady()
+    {
+        return _isReady;
     }
 
     async void StartProcess()
@@ -74,7 +79,7 @@ public class RemoteConfigManager : MonoBehaviour
             VersionText = remoteConfig.Value<string>(_versionTextKey),
         };
 
-        IsReady = true;
+        _isReady = true;
 
         OnRemoteConfigLoad();
     }
