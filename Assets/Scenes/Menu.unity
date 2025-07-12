@@ -1168,6 +1168,108 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: -6763468457131895247, guid: 881cc66327c74cd4d835e2b3ccedd2ac, type: 3}
   m_PrefabInstance: {fileID: 68777000}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &514006824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1415714155}
+    m_Modifications:
+    - target: {fileID: 4893749179122731716, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_Name
+      value: PopUp Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+--- !u!224 &514006825 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6686584421215494953, guid: 79d994f92cd28a744bdc2d3e47bcb68d, type: 3}
+  m_PrefabInstance: {fileID: 514006824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &722873608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ab4d6ac5f7a9547b15987339b527d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _popUpTitle: Restore Data
+  _popUpDescription: Are you sure you want to reset all your stored data? This would
+    include your currency, stamina and bought items.
 --- !u!1 &809590179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2364,7 @@ RectTransform:
   - {fileID: 2138077581}
   - {fileID: 1674659909}
   - {fileID: 855677176}
+  - {fileID: 514006825}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
