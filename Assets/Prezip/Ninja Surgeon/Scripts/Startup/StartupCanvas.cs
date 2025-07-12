@@ -7,6 +7,7 @@ public class StartupCanvas : MonoBehaviour
     [SerializeField] private GameObject _serverOutPanel;
     [SerializeField] private Button _startButton;
     [SerializeField] private Slider _progressBar;
+    [SerializeField] private GameObject _tipsPanel;
 
     MenuLoader _menuLoader;
 
@@ -30,6 +31,8 @@ public class StartupCanvas : MonoBehaviour
         _serverOutPanel.SetActive(false);
 
         _startButton.gameObject.SetActive(false);
+
+        _tipsPanel.SetActive(false);
     }
 
     void OnDestroy()
@@ -58,6 +61,8 @@ public class StartupCanvas : MonoBehaviour
         _progressBar.gameObject.SetActive(true);
 
         _startButton.gameObject.SetActive(false);
+
+        _tipsPanel.SetActive(true);
     }
 
     void UpdateProgressBar(float progress)
