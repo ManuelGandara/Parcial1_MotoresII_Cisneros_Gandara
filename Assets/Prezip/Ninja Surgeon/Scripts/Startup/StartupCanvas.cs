@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class StartupCanvas : MonoBehaviour
 {
-    [SerializeField] private GameObject _loadingComponent;
+    [SerializeField] private GameObject _syncComponent;
     [SerializeField] private GameObject _serverOutPanel;
     [SerializeField] private Button _startButton;
     [SerializeField] private Slider _progressBar;
-    [SerializeField] private GameObject _tipsPanel;
+    [SerializeField] private GameObject _loadingPanel;
 
     MenuLoader _menuLoader;
 
@@ -26,13 +26,13 @@ public class StartupCanvas : MonoBehaviour
 
         _startButton.onClick.AddListener(_menuLoader.LoadMenu);
 
-        _loadingComponent.SetActive(true);
+        _syncComponent.SetActive(true);
 
         _serverOutPanel.SetActive(false);
 
         _startButton.gameObject.SetActive(false);
 
-        _tipsPanel.SetActive(false);
+        _loadingPanel.SetActive(false);
     }
 
     void OnDestroy()
@@ -42,7 +42,7 @@ public class StartupCanvas : MonoBehaviour
 
     void DisplayRemoteConfigValues()
     {
-        _loadingComponent.SetActive(false);
+        _syncComponent.SetActive(false);
 
         if (RemoteConfigManager.Instance.RemoteConfigValues.ServerIsOut)
         {
@@ -56,13 +56,11 @@ public class StartupCanvas : MonoBehaviour
 
     void DisplayLoadingComponents()
     {
-        _loadingComponent.SetActive(true);
-
         _progressBar.gameObject.SetActive(true);
 
         _startButton.gameObject.SetActive(false);
 
-        _tipsPanel.SetActive(true);
+        _loadingPanel.SetActive(true);
     }
 
     void UpdateProgressBar(float progress)
