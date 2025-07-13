@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _popUpTitle: Restore Data
   _popUpDescription: Are you sure you want to reset all your stored data? This would
-    include your currency, stamina and bought items.
+    include your currency, stamina, bought items and sound configuration.
 --- !u!1 &809590179
 GameObject:
   m_ObjectHideFlags: 0

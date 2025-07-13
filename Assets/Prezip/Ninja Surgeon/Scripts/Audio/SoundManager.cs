@@ -1,11 +1,18 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
+[RequireComponent(typeof(SoundStorage))]
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
 
     public static SoundManager Instance;
+
+    public event Action<string, float> OnVolumeChange = delegate { };
+
+    string[] _mixerIds = { "Master", "Music", "SFX" };
+    SoundStorage _soundStorage;
 
     void Awake()
     {
@@ -21,9 +28,23 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        _soundStorage = GetComponent<SoundStorage>();
+
+        foreach (string mixerId in _mixerIds)
+        {
+            UpdateMixerVolume(mixerId, _soundStorage.RetrieveMixerVolume(mixerId));
+        }
+
+        OnVolumeChange += GetComponent<SoundStorage>().PersistMixerVolume;
+    }
+
     public void UpdateMixerVolume(string mixerGroup, float volumePercentage)
     {
         _audioMixer.SetFloat(GetVolumeExposedVariable(mixerGroup), 20 * Mathf.Log10(Mathf.Clamp(volumePercentage, 0.0001f, 1)));
+
+        OnVolumeChange(mixerGroup, volumePercentage);
     }
 
     public float GetAudioMixerVolume(string mixerGroup)
@@ -31,6 +52,16 @@ public class SoundManager : MonoBehaviour
         _audioMixer.GetFloat(GetVolumeExposedVariable(mixerGroup), out float volumeDb);
 
         return Mathf.Pow(10, volumeDb / 20);
+    }
+
+    public void RestoreMixerVolumes()
+    {
+        foreach (string mixerId in _mixerIds)
+        {
+            _soundStorage.DeleteMixerVolumes(mixerId);
+
+            UpdateMixerVolume(mixerId, _soundStorage.RetrieveMixerVolume(mixerId));
+        }
     }
 
     string GetVolumeExposedVariable(string mixerGroup)

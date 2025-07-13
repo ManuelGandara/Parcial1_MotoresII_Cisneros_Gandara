@@ -28,5 +28,7 @@ public class RestoreDataButton : MonoBehaviour
         StaminaManager.Instance.ResetStamina();
 
         StoreManager.Instance.ResetStore();
+
+        SoundManager.Instance.RestoreMixerVolumes();
     }
 }
