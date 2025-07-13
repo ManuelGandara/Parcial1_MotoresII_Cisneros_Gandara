@@ -12,6 +12,11 @@ public class CurrencyDisplay : MonoBehaviour
         _currencyText.text = "$ " + StoreManager.Instance.Currency;
     }
 
+    void OnDestroy()
+    {
+        StoreManager.Instance.OnStoreStatusUpdate -= DisplayNextCurrency;
+    }
+
     void DisplayNextCurrency(StoreStatus storeStatus)
     {
         _currencyText.text = "$ " + storeStatus.Currency;

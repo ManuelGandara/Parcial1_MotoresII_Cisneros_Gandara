@@ -12,6 +12,11 @@ public class StaminaDisplay : MonoBehaviour
         DisplayNextStamina(StaminaManager.Instance.CurrentStamina);
     }
 
+    void OnDestroy()
+    {
+        StaminaManager.Instance.OnStaminaUpdate -= DisplayNextStamina;
+    }
+
     void DisplayNextStamina(Stamina stamina)
     {
         _staminaText.text = "♥ " + stamina.Amount;

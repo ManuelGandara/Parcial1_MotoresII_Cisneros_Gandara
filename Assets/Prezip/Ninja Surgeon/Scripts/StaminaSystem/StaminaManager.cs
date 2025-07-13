@@ -44,6 +44,11 @@ public class StaminaManager : MonoBehaviour
 
     public int MaxStamina { get { return _maxStamina;  } }
 
+    public bool HasEnoughStamina(int amount)
+    {
+        return _stamina.Amount >= amount;
+    }
+
     // Usar para deshabilitar el botón de jugar cuando no haya suficiente stamina
     public bool DoesNotHaveEnoughStamina(int amount)
     {
