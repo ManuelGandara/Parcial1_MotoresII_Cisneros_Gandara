@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    int score;
-    int lives;
+    [SerializeField] public int score;
+    [SerializeField] public int lives;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public Image gameOverImage;
@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public int currencyPerWin = 10;
     public int staminaPerPlay = 10;
 
+    public GameObject spawner1;
+    public GameObject spawner2;
+    public GameObject spawner3;
+
     void Start()
     {
         score = 0;
@@ -33,7 +37,12 @@ public class GameManager : MonoBehaviour
     {
         if (score >= 300)
         {
-            Victory(); 
+            StartCoroutine(GameOverSequence());
+        }
+
+        if (lives < 0)
+        {
+            lives = 0;
         }
     }
 
@@ -50,9 +59,9 @@ public class GameManager : MonoBehaviour
             lives--;
             livesText.text = "Lives: " + lives;
 
-            if (lives == 0)
+            if (lives <= 0)
             {
-                GameOver();
+                StartCoroutine(GameOverSequence());
             }
         }
     }
@@ -85,7 +94,6 @@ public class GameManager : MonoBehaviour
             menuButton.gameObject.SetActive(true);
 
         StoreManager.Instance.ObtainCurrency(currencyPerWin);
-
         TimeManager.instance.StopTime(5f);
     }
 
@@ -108,6 +116,22 @@ public class GameManager : MonoBehaviour
         StaminaManager.Instance.ConsumeStamina(staminaPerPlay);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private IEnumerator GameOverSequence()
+    {
+        spawner1.SetActive(false);
+        spawner2.SetActive(false);
+        spawner3.SetActive(false);
+        yield return new WaitForSeconds(3f);
+        if (lives <= 0)
+        {
+            GameOver();
+        }
+        else
+        {
+            Victory();
+        }
     }
 }
 
