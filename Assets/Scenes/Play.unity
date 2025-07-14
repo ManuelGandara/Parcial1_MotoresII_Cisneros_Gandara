@@ -461,8 +461,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: lives 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
-  m_sharedMaterial: {fileID: -2702654793625633834, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
+  m_sharedMaterial: {fileID: 2994696047290737970, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -882,6 +882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f144ae717b32df45b231c6272f5de9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  lives: 0
   scoreText: {fileID: 1462423006}
   livesText: {fileID: 315568378}
   gameOverImage: {fileID: 674881152}
@@ -2500,8 +2502,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
-  m_sharedMaterial: {fileID: -2702654793625633834, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
+  m_sharedMaterial: {fileID: 2994696047290737970, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2818,10 +2820,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Objective 300 Points
+  m_text: 'Objective: 300'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
-  m_sharedMaterial: {fileID: -2702654793625633834, guid: 93355502916dcf44691bb2dab5abfa93, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
+  m_sharedMaterial: {fileID: 2994696047290737970, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
