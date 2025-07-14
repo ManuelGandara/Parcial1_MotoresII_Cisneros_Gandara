@@ -47,6 +47,8 @@ public class PlaySceneLoader : MonoBehaviour
 
     IEnumerator LoadPlaySceneAsync()
     {
+        StaminaManager.Instance.ConsumeStamina(_playCost);
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_playScene, LoadSceneMode.Single);
 
         asyncLoad.allowSceneActivation = false;
@@ -57,8 +59,6 @@ public class PlaySceneLoader : MonoBehaviour
 
             if (asyncLoad.progress >= 0.9f)
             {
-                StaminaManager.Instance.ConsumeStamina(_playCost);
-
                 asyncLoad.allowSceneActivation = true;
             }
 

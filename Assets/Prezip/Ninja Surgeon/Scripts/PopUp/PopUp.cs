@@ -44,6 +44,8 @@ public class PopUp : MonoBehaviour
 
     public void LoadPopUp(string title, string description, Action onAccept)
     {
+        Time.timeScale = 0;
+
         _onAccept = () => {
             onAccept();
 
@@ -61,6 +63,8 @@ public class PopUp : MonoBehaviour
 
     public void Close()
     {
+        Time.timeScale = 1;
+
         _popUpPanel.SetActive(false);
     }
 }
