@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private float _pauseVolumeDx = 5f;
 
     public static SoundManager Instance;
 
@@ -61,6 +62,24 @@ public class SoundManager : MonoBehaviour
             _soundStorage.DeleteMixerVolumes(mixerId);
 
             UpdateMixerVolume(mixerId, _soundStorage.RetrieveMixerVolume(mixerId));
+        }
+    }
+
+    public void TemporarilyIncreaseVolume()
+    {
+        TemporarilyChangeVolume(_pauseVolumeDx);
+    }
+
+    public void TemporarilyDecreaseVolume()
+    {
+        TemporarilyChangeVolume(-_pauseVolumeDx);
+    }
+
+    void TemporarilyChangeVolume(float difference)
+    {
+        if (_audioMixer.GetFloat("MasterVolume", out float currentVolume))
+        {
+            _audioMixer.SetFloat("MasterVolume", currentVolume + difference);
         }
     }
 
