@@ -7,6 +7,7 @@ public class BadEyes : MonoBehaviour
     private float rotationForce = 200;
     public ParticleSystem BadEyeParticle;
 
+
     void Update()
     {
         transform.Rotate(Vector2.right * Time.deltaTime * rotationForce);
@@ -14,7 +15,7 @@ public class BadEyes : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Blade")
+        if (other.tag == "Blade")
         {
             Destroy(gameObject);
             SFXManager.Instance.PlayClip(1);

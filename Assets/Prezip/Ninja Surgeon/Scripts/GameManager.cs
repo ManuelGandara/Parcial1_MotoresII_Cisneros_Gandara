@@ -52,6 +52,12 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    public void UpdateLife(int LifeAdd)
+    {
+        lives += lives + LifeAdd;
+        livesText.text = lives.ToString();
+    }
+
     public void UpdateLives()
     {
         if (gameIsOver == false)

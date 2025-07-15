@@ -41,7 +41,7 @@ public class Eyes : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Blade")
+        if(other.tag == "Blade" || other.gameObject.layer == 8)
         {
             gm.UpdateTheScore(scorePoints);
             SFXManager.Instance.PlayClip(0);

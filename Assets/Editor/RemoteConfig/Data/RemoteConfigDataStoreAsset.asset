@@ -12,32 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7b59d47b-bcca-479c-9030-50f88a9f6dfd\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"87484070-1052-4124-92ab-729edacce48a\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"53e5a44d-f82e-4341-af94-9db059eb0baa\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"650d5a4f-5f3e-48a9-af80-330f63daec5c\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"b59cc957-0ef9-43da-9c34-34578061be12\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"992f6ffb-dd5c-4f8c-9e5e-dd085d5659d9\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
     \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"4ac66b23-fbca-4d20-bf98-32c5f270e417\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"94ceb2f4-4543-45f7-8ea7-a68eb1a55ffb\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4472babb-0091-4154-8847-a925e4cefe65\"\r\n   
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"57e63314-c9b2-4a63-91a1-e3b22e479c65\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
     \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7b59d47b-bcca-479c-9030-50f88a9f6dfd\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"87484070-1052-4124-92ab-729edacce48a\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"53e5a44d-f82e-4341-af94-9db059eb0baa\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"650d5a4f-5f3e-48a9-af80-330f63daec5c\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"b59cc957-0ef9-43da-9c34-34578061be12\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"992f6ffb-dd5c-4f8c-9e5e-dd085d5659d9\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
     \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"4ac66b23-fbca-4d20-bf98-32c5f270e417\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"94ceb2f4-4543-45f7-8ea7-a68eb1a55ffb\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4472babb-0091-4154-8847-a925e4cefe65\"\r\n   
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"57e63314-c9b2-4a63-91a1-e3b22e479c65\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
     \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"7394f8cb-5c58-4a92-909d-5efecfaeec4b\",\r\n   

@@ -5,9 +5,20 @@ using UnityEngine;
 public class IceCube : MonoBehaviour
 {
     public float timeStopDuration = 4f;
-
     private float rotationForce = 200;
-    public ParticleSystem IceCubeParticle;
+    public int scorePoints;
+    private GameManager gm;
+
+    public GameObject slicedEye;
+    public GameObject EyeBlood;
+    private Rigidbody rb;
+    //public ParticleSystem IceCubeParticle;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        gm = FindObjectOfType<GameManager>();
+    }
 
     void Update()
     {
@@ -18,12 +29,30 @@ public class IceCube : MonoBehaviour
     {
         if (other.tag == "Blade")
         {
-            Destroy(gameObject);
+            gm.UpdateTheScore(scorePoints);
             SFXManager.Instance.PlayClip(0);
-            Instantiate(IceCubeParticle, transform.position, IceCubeParticle.transform.rotation);
-
+            Destroy(gameObject);
+            InstantiateSlicedEye();
             StartCoroutine(FreezeObjectives());
+
         }
+    }
+
+    private void InstantiateSlicedEye()
+    {
+        GameObject instantiatedEye = Instantiate(slicedEye, transform.position, transform.rotation);
+        GameObject instantiatedBlood = Instantiate(EyeBlood, new Vector3(transform.position.x, transform.position.y, 0), EyeBlood.transform.rotation);
+
+        Rigidbody[] slicedRb = instantiatedEye.transform.GetComponentsInChildren<Rigidbody>();
+
+        foreach (Rigidbody srb in slicedRb)
+        {
+            srb.AddExplosionForce(130f, transform.position, 10);
+            srb.velocity = rb.velocity * 1.2f;
+        }
+
+        Destroy(instantiatedEye, 5);
+        Destroy(instantiatedBlood, 5);
     }
 
     private IEnumerator FreezeObjectives()
