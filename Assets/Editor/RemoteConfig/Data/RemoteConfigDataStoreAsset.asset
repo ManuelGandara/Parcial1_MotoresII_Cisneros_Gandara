@@ -12,34 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"de4fc7f7-53fa-402d-8d5d-81e27fafa6cd\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"ac121173-164c-486e-ba37-264caba33412\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"b0861ce4-4bd6-460e-bb90-290a34f428c4\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"b2945ce1-04fb-4dbd-aa27-a506b84eedc4\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ee2e73ff-59f9-4467-9d27-d3dd6d87f99f\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"b56c289a-4793-4d49-8a58-3f6e2eab83f4\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
     \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"22502878-5f56-46c3-be4b-8adcb36de680\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"14b5ede6-1fd4-4ad6-92fe-f5207a4a34f7\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"02733cab-2808-4833-9ea7-3b681044fe1d\"\r\n   
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"ecbe9b7d-cfd2-4807-b35f-bec53637b9d6\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
-    \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"de4fc7f7-53fa-402d-8d5d-81e27fafa6cd\"\r\n   
+    \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"9e4e2ca4-f493-4e78-be9a-85f17e8a4ccb\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Float_Store_Discount\",\r\n      \"type\":
+    \"float\",\r\n      \"value\": 0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"724c09b1-4425-4377-9acb-ceaffd626b43\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"Int_Initial_Lives\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"5c8785f5-0b5b-495d-a72b-05d9dce73679\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Int_Evil_Eyes_Lives_Decrease\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"f4302082-37f9-4d03-969d-56800a346488\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Float_Evil_Eye_Probability\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": 0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"4be4d03f-4b6f-4741-a4fa-a85eab4071a4\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Float_Freeze_Duration\",\r\n      \"type\": \"float\",\r\n      \"value\":
+    2.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4fc9ccb8-0684-43b2-afc0-22da3805dfaf\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"String_Menu_Song\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"Evanescence - Bring Me To Life\"\r\n    }\r\n 
+    }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"ac121173-164c-486e-ba37-264caba33412\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Bool_ServiceOut\",\r\n      \"type\":
     \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"b0861ce4-4bd6-460e-bb90-290a34f428c4\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"b2945ce1-04fb-4dbd-aa27-a506b84eedc4\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"Int_Version\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ee2e73ff-59f9-4467-9d27-d3dd6d87f99f\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"b56c289a-4793-4d49-8a58-3f6e2eab83f4\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"String_Version\",\r\n      \"type\": \"string\",\r\n      \"value\":
     \"Version\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"22502878-5f56-46c3-be4b-8adcb36de680\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"14b5ede6-1fd4-4ad6-92fe-f5207a4a34f7\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"Float_Parche\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"02733cab-2808-4833-9ea7-3b681044fe1d\"\r\n   
+    0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"ecbe9b7d-cfd2-4807-b35f-bec53637b9d6\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"String_InfoService\",\r\n      \"type\":
-    \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  }\r\n]"
+    \"string\",\r\n      \"value\": \"El server esta joya\"\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"9e4e2ca4-f493-4e78-be9a-85f17e8a4ccb\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Float_Store_Discount\",\r\n      \"type\":
+    \"float\",\r\n      \"value\": 0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"724c09b1-4425-4377-9acb-ceaffd626b43\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"Int_Initial_Lives\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"5c8785f5-0b5b-495d-a72b-05d9dce73679\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Int_Evil_Eyes_Lives_Decrease\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"f4302082-37f9-4d03-969d-56800a346488\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Float_Evil_Eye_Probability\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": 0.1\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"4be4d03f-4b6f-4741-a4fa-a85eab4071a4\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Float_Freeze_Duration\",\r\n      \"type\": \"float\",\r\n      \"value\":
+    2.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4fc9ccb8-0684-43b2-afc0-22da3805dfaf\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"String_Menu_Song\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"Evanescence - Bring Me To Life\"\r\n    }\r\n 
+    }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"7394f8cb-5c58-4a92-909d-5efecfaeec4b\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"0bb9b94b-46b3-48aa-8e0a-48bc2e8f2f5d\",\r\n   
     \"isDefault\": true,\r\n    \"createdAt\": \"2024-10-02T02:26:44Z\",\r\n    \"updatedAt\":
