@@ -17,6 +17,11 @@ public abstract class Item : MonoBehaviour
         return StoreManager.Instance.Currency >= Price && SatisfiesAdditionalBuyConditions();
     }
 
+    public virtual bool CanRetrieve()
+    {
+        return SatisfiesAdditionalBuyConditions();
+    }
+
     public virtual bool WasSold()
     {
         return false;
@@ -26,6 +31,11 @@ public abstract class Item : MonoBehaviour
     {
         StoreManager.Instance.SpendCurrency(Price);
 
+        GetRetrieved();
+    }
+
+    public void GetRetrieved()
+    {
         PurchaseAction();
     }
 

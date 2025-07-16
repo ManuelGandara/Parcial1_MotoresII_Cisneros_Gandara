@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int staminaPerPlay = 10;
     [SerializeField] public int WinPoints = 300;
     [SerializeField] private TextMeshProUGUI ScoreText;
+    private bool _gameOverSequenceTriggered = false;
 
     public GameObject spawner1;
     public GameObject spawner2;
@@ -105,7 +106,6 @@ public class GameManager : MonoBehaviour
         TimeManager.instance.StopTime(5f);
 
         AdsManager.Instance.ShowAd();
-
     }
 
     public void Victory()
@@ -145,10 +145,19 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameOverSequence()
     {
+        if (_gameOverSequenceTriggered)
+        {
+            yield break;
+        }
+        _gameOverSequenceTriggered = true;
         spawner1.SetActive(false);
         spawner2.SetActive(false);
         spawner3.SetActive(false);
         yield return new WaitForSeconds(3f);
+        if (GachaSystem.Instance != null)
+        {
+            GachaSystem.Instance.TryPickReward();
+        }
         if (lives <= 0)
         {
             GameOver();

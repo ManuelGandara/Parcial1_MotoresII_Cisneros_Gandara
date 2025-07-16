@@ -4,6 +4,11 @@ public class StaminaRechargeItem : Item
 {
     [SerializeField] private int _staminaRecovered = 10;
 
+    public override bool CanRetrieve()
+    {
+        return true;
+    }
+
     public override string GetPopUpTitle()
     {
         return $"Buy {_staminaRecovered} Stamina";
