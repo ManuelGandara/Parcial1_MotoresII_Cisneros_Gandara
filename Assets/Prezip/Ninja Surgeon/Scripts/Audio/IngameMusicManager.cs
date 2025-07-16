@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -48,5 +49,10 @@ public class IngameMusicManager : MonoBehaviour
     public void ObtainSong(AudioClip song)
     {
         _storage.ObtainItem(song, song.name);
+    }
+
+    internal void RestoreObtainedSongs()
+    {
+        _storage.ResetItems();
     }
 }

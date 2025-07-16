@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     public void UpdateLife(int LifeAdd)
     {
         lives += lives + LifeAdd;
-        livesText.text = lives.ToString();
+        livesText.text = Mathf.Max(0, lives).ToString();
     }
 
     public void UpdateLives()
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (gameIsOver == false)
         {
             lives--;
-            livesText.text = "Lives: " + lives;
+            livesText.text = "Lives " + Mathf.Max(0, lives).ToString();
 
             if (lives <= 0)
             {
@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         gameVictory = false;
 
         scoreText.text = score.ToString();
-        livesText.text = "Lives: " + lives;
+        livesText.text = "Lives " + Mathf.Max(0, lives).ToString();
 
         gameOverImage.gameObject.SetActive(false);
         gameVictoryImage.gameObject.SetActive(false);

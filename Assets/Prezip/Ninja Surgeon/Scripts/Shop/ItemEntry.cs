@@ -36,6 +36,8 @@ public class ItemEntry : MonoBehaviour
 
         StoreManager.Instance.OnStoreStatusUpdate += UpdateBuyConditions;
 
+        RestoreDataManager.Instance.OnRestore += UpdateBuyConditions;
+
         return this;
     }
 
@@ -44,6 +46,8 @@ public class ItemEntry : MonoBehaviour
         _shop.OnPurchase -= UpdateBuyConditions;
 
         StoreManager.Instance.OnStoreStatusUpdate -= UpdateBuyConditions;
+
+        RestoreDataManager.Instance.OnRestore -= UpdateBuyConditions;
     }
 
     void Buy()
@@ -51,10 +55,15 @@ public class ItemEntry : MonoBehaviour
         PopUp.Instance.LoadPopUp(_item.GetPopUpTitle(), _item.GetPopUpDescription(), () => _shop.PurchaseItem(_item));
     }
 
-    void UpdateBuyConditions(object any)
+    void UpdateBuyConditions()
     {
         _buyButton.enabled = _item.CanBuy();
 
         _buyButtonText.text = _item.WasSold() ? "Sold" : "Buy";
+    }
+
+    void UpdateBuyConditions(object any)
+    {
+        UpdateBuyConditions();
     }
 }

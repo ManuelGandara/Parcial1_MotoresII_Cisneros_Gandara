@@ -20,15 +20,6 @@ public class RestoreDataButton : MonoBehaviour
 
     void LoadPopUp()
     {
-        PopUp.Instance.LoadPopUp(_popUpTitle, _popUpDescription, RestoreData);
-    }
-
-    void RestoreData()
-    {
-        StaminaManager.Instance.ResetStamina();
-
-        StoreManager.Instance.ResetStore();
-
-        SoundManager.Instance.RestoreMixerVolumes();
+        PopUp.Instance.LoadPopUp(_popUpTitle, _popUpDescription, RestoreDataManager.Instance.RestoreData);
     }
 }

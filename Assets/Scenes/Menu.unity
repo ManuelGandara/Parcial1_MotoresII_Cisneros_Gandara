@@ -412,7 +412,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 8
+  m_fontStyle: 33
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1145,9 +1145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'restore
-
-    data'
+  m_text: Restore
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
   m_sharedMaterial: {fileID: 2994696047290737970, guid: c03f7ff088b88b14cb27158de5a0174a, type: 2}
@@ -1443,7 +1441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Three Days Grace - I Hate Everything About You
   _price: 20
-  _isInfinite: 0
   _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
   _song: {fileID: 8300000, guid: b8bd4884a7883604fab89cbe3cbebc21, type: 3}
 --- !u!1 &600339554
@@ -1787,7 +1784,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Limp Bizkit - Nookie
   _price: 20
-  _isInfinite: 0
   _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
   _song: {fileID: 8300000, guid: ef5792c643090a748b5abd19a53f696f, type: 3}
 --- !u!1 &994154611
@@ -1969,7 +1965,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stamina Boost
   _price: 20
-  _isInfinite: 1
   _icon: {fileID: 21300000, guid: 00743848568cb6c46a6e3b1c8d963767, type: 3}
   _staminaRecovered: 10
 --- !u!1001 &1164336318
@@ -2914,7 +2909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Nightwish - 10th Man Down
   _price: 20
-  _isInfinite: 0
   _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
   _song: {fileID: 8300000, guid: 0bc186a60b69c4344a9b4a2f49e3f47d, type: 3}
 --- !u!1 &1650130587
@@ -3197,7 +3191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Max Stamina Boost
   _price: 120
-  _isInfinite: 1
   _icon: {fileID: 21300000, guid: 00743848568cb6c46a6e3b1c8d963767, type: 3}
   _staminaRecovered: 100
 --- !u!1 &1775076411
@@ -3246,7 +3239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Big Stamina Boost
   _price: 50
-  _isInfinite: 1
   _icon: {fileID: 21300000, guid: 00743848568cb6c46a6e3b1c8d963767, type: 3}
   _staminaRecovered: 30
 --- !u!1 &1838681234
@@ -3511,7 +3503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Rammstein - Engel
   _price: 20
-  _isInfinite: 0
   _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
   _song: {fileID: 8300000, guid: 8d69f3e40e268f244a86e14c70ab7d4b, type: 3}
 --- !u!1 &1956603964
@@ -3864,7 +3855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Drowning Pool - Bodies
   _price: 20
-  _isInfinite: 0
   _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
   _song: {fileID: 8300000, guid: 37f4ced1c7cb2f640882b59019556aad, type: 3}
 --- !u!1 &2115888040
