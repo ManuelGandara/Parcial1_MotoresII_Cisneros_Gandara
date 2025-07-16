@@ -31,6 +31,8 @@ public class RestoreDataManager : MonoBehaviour
 
         IngameMusicManager.Instance.RestoreObtainedSongs();
 
+        BackgroundManager.Instance.RestoreObtainedBGs();
+
         OnRestore();
     }
 }

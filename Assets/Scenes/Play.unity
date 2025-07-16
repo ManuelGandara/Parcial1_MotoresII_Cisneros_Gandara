@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,6 +921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575561758}
   - component: {fileID: 575561757}
+  - component: {fileID: 575561759}
   m_Layer: 0
   m_Name: Fondo
   m_TagString: Untagged
@@ -995,6 +996,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575561759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575561756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a86db0578e8094f963a43a1a63a1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &602053426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,6 +3225,7 @@ MonoBehaviour:
   _clips:
   - {fileID: 8300000, guid: 8ca10b1f79da2e14aa974e857a96578d, type: 3}
   - {fileID: 8300000, guid: 2694878fd0d7abc4abff261075ed9011, type: 3}
+  _sfxPitchDiff: 0.1
 --- !u!4 &1802946698
 Transform:
   m_ObjectHideFlags: 0
