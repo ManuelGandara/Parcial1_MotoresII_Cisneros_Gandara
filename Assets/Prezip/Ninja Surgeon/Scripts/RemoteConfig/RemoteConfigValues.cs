@@ -12,6 +12,8 @@ public struct RemoteConfigValues
 
     public float StoreDiscount;
 
+    public string MenuSong;
+
     public int InitialLives;
 
     public float FreezeDuration;
