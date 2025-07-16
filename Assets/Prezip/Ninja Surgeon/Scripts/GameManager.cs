@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public bool gameVictory = false;
     public int currencyPerWin = 10;
     public int staminaPerPlay = 10;
+    [SerializeField] public int WinPoints = 300;
+    [SerializeField] private TextMeshProUGUI ScoreText;
 
     public GameObject spawner1;
     public GameObject spawner2;
@@ -37,6 +39,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        ScoreText.text = "Objective: " + WinPoints.ToString();
     }
 
     void Start()
@@ -50,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (score >= 300)
+        if (score >= WinPoints)
         {
             StartCoroutine(GameOverSequence());
         }
@@ -158,6 +162,11 @@ public class GameManager : MonoBehaviour
     void SetLivesText()
     {
         livesText.text = "Lives " + Mathf.Max(0, lives).ToString();
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
 
