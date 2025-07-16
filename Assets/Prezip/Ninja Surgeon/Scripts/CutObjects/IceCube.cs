@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IceCube : MonoBehaviour
 {
-    public float timeStopDuration = 4f;
+    private float timeStopDuration;
     private float rotationForce = 200;
     public int scorePoints;
     private GameManager gm;
@@ -16,6 +16,7 @@ public class IceCube : MonoBehaviour
 
     private void Start()
     {
+        timeStopDuration = RemoteConfigManager.Instance.RemoteConfigValues.FreezeDuration;
         rb = GetComponent<Rigidbody>();
         gm = FindObjectOfType<GameManager>();
     }
@@ -31,7 +32,9 @@ public class IceCube : MonoBehaviour
         {
             gm.UpdateTheScore(scorePoints);
             SFXManager.Instance.PlayClip(0);
-            Destroy(gameObject);
+            Destroy(transform.GetChild(0).gameObject);
+            GetComponent<SphereCollider>().enabled = false;
+            Destroy(gameObject, timeStopDuration + 1);
             InstantiateSlicedEye();
             StartCoroutine(FreezeObjectives());
 
@@ -74,7 +77,7 @@ public class IceCube : MonoBehaviour
 
         foreach (GameObject obj in objectives)
         {
-            if (obj.TryGetComponent(out Rigidbody rb))
+            if (obj != null && obj.TryGetComponent(out Rigidbody rb))
             {
                 rb.constraints = RigidbodyConstraints.None;
                 rb.useGravity = true;

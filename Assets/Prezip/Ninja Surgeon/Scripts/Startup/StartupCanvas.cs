@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class StartupCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject _syncComponent;
+    [SerializeField] private GameObject _serverStatus;
     [SerializeField] private GameObject _serverOutPanel;
     [SerializeField] private Button _startButton;
     [SerializeField] private Slider _progressBar;
@@ -50,6 +51,8 @@ public class StartupCanvas : MonoBehaviour
         }
         else
         {
+            _serverStatus.SetActive(true);
+
             _startButton.gameObject.SetActive(true);
         }
     }

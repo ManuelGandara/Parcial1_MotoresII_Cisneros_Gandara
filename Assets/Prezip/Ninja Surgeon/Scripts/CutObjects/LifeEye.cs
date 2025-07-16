@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class LifeEye : MonoBehaviour
 {
-    public int lifePlus = 1;
     void Awake()
     {
-        GameManager.instance.UpdateLife(lifePlus);
+        GameManager.instance.UpdateLife(RemoteConfigManager.Instance.RemoteConfigValues.LivesIncrease);
     }
 }
