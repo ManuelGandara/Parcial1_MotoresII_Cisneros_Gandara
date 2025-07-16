@@ -82,7 +82,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -140}
+  m_AnchoredPosition: {x: 970, y: -140}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8957189755986296158
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Big Stamina Boost
   _price: 50
-  _icon: {fileID: 21300000, guid: 00743848568cb6c46a6e3b1c8d963767, type: 3}
+  _icon: {fileID: 21300000, guid: 447e4118b2ab9ad4c9add26c303cf2ae, type: 3}
   _staminaRecovered: 30
 --- !u!1 &2758403854381168670
 GameObject:
@@ -205,7 +205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -215}
+  m_AnchoredPosition: {x: 970, y: -215}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2816560247283251258
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.7764706, g: 0.7764706, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -237,7 +237,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 61624400dc2ca25428e237f4ba7c0b4a, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stamina Boost
   _price: 20
-  _icon: {fileID: 21300000, guid: 00743848568cb6c46a6e3b1c8d963767, type: 3}
+  _icon: {fileID: 21300000, guid: 447e4118b2ab9ad4c9add26c303cf2ae, type: 3}
   _staminaRecovered: 10
 --- !u!1 &4740908042152979100
 GameObject:
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.89385706, g: 0.5740477, b: 0.9433962, a: 0.22745098}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -499,8 +499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -255}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 970, y: -270}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8744997521177831737
 CanvasRenderer:
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2ab8bc328c77cf442929addb13fb8a14, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Rammstein - Engel
   _price: 20
-  _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
+  _icon: {fileID: 21300000, guid: 86e9c7c8bf9d34a4e975ac43e919b768, type: 3}
   _song: {fileID: 8300000, guid: 8d69f3e40e268f244a86e14c70ab7d4b, type: 3}
 --- !u!1 &6886810239848481621
 GameObject:
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Drowning Pool - Bodies
   _price: 20
-  _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
+  _icon: {fileID: 21300000, guid: 86e9c7c8bf9d34a4e975ac43e919b768, type: 3}
   _song: {fileID: 8300000, guid: 37f4ced1c7cb2f640882b59019556aad, type: 3}
 --- !u!1 &7269933803729647487
 GameObject:
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Limp Bizkit - Nookie
   _price: 20
-  _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
+  _icon: {fileID: 21300000, guid: 86e9c7c8bf9d34a4e975ac43e919b768, type: 3}
   _song: {fileID: 8300000, guid: ef5792c643090a748b5abd19a53f696f, type: 3}
 --- !u!1 &7645431732882857678
 GameObject:
@@ -874,15 +874,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fff850cd804271f4ba02cb11a3e67ddf, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Nightwish - 10th Man Down
   _price: 20
-  _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
+  _icon: {fileID: 21300000, guid: 86e9c7c8bf9d34a4e975ac43e919b768, type: 3}
   _song: {fileID: 8300000, guid: 0bc186a60b69c4344a9b4a2f49e3f47d, type: 3}
 --- !u!1 &8695665733641312323
 GameObject:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Max Stamina Boost
   _price: 120
-  _icon: {fileID: 21300000, guid: 00743848568cb6c46a6e3b1c8d963767, type: 3}
+  _icon: {fileID: 21300000, guid: 447e4118b2ab9ad4c9add26c303cf2ae, type: 3}
   _staminaRecovered: 100
 --- !u!1 &8959160507397342113
 GameObject:
@@ -1047,7 +1047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -65}
+  m_AnchoredPosition: {x: 970, y: -65}
   m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4171809356785124426
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.7764706, g: 0.7764706, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1079,7 +1079,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 61624400dc2ca25428e237f4ba7c0b4a, type: 3}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
@@ -1126,7 +1126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -25}
+  m_AnchoredPosition: {x: 970, y: -25}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7310942297220023179
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.7764706, g: 0.7764706, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1158,7 +1158,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 61624400dc2ca25428e237f4ba7c0b4a, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.7764706, g: 0.7764706, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 61624400dc2ca25428e237f4ba7c0b4a, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1296,5 +1296,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Three Days Grace - I Hate Everything About You
   _price: 20
-  _icon: {fileID: 21300000, guid: c577d300786c507408da9aeb6c6a437e, type: 3}
+  _icon: {fileID: 21300000, guid: 86e9c7c8bf9d34a4e975ac43e919b768, type: 3}
   _song: {fileID: 8300000, guid: b8bd4884a7883604fab89cbe3cbebc21, type: 3}
