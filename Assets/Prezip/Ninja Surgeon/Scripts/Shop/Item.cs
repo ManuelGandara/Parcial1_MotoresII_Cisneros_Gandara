@@ -8,13 +8,13 @@ public abstract class Item : MonoBehaviour
 
     public string Name { get { return _name; } }
 
-    public int Price { get { return _price; } }
+    public int Price { get { return _price - Mathf.FloorToInt(RemoteConfigManager.Instance.RemoteConfigValues.StoreDiscount * _price); } }
 
     public Sprite Icon { get { return _icon; } }
 
     public bool CanBuy()
     {
-        return StoreManager.Instance.Currency >= _price && SatisfiesAdditionalBuyConditions();
+        return StoreManager.Instance.Currency >= Price && SatisfiesAdditionalBuyConditions();
     }
 
     public virtual bool WasSold()
@@ -24,7 +24,7 @@ public abstract class Item : MonoBehaviour
 
     public void GetPurchased()
     {
-        StoreManager.Instance.SpendCurrency(_price);
+        StoreManager.Instance.SpendCurrency(Price);
 
         PurchaseAction();
     }

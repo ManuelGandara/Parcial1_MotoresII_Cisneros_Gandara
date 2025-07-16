@@ -9,4 +9,6 @@ public struct RemoteConfigValues
     public float Patch;
 
     public string VersionText;
+
+    public float StoreDiscount;
 }
