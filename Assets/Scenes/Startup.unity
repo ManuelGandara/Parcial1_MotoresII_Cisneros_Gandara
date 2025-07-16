@@ -927,14 +927,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debfcf4be9035204bbaae11e59eb6ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _availableSongs:
+  _possibleSongs:
+  - {fileID: 8300000, guid: b1041cf1e33bf6f418d39c57f8f53852, type: 3}
+  - {fileID: 8300000, guid: 37f4ced1c7cb2f640882b59019556aad, type: 3}
+  - {fileID: 8300000, guid: ef5792c643090a748b5abd19a53f696f, type: 3}
+  - {fileID: 8300000, guid: 0bc186a60b69c4344a9b4a2f49e3f47d, type: 3}
   - {fileID: 8300000, guid: 8d69f3e40e268f244a86e14c70ab7d4b, type: 3}
   - {fileID: 8300000, guid: b8bd4884a7883604fab89cbe3cbebc21, type: 3}
-  - {fileID: 8300000, guid: b1041cf1e33bf6f418d39c57f8f53852, type: 3}
-  - {fileID: 8300000, guid: 0bc186a60b69c4344a9b4a2f49e3f47d, type: 3}
-  - {fileID: 8300000, guid: ef5792c643090a748b5abd19a53f696f, type: 3}
-  - {fileID: 8300000, guid: 37f4ced1c7cb2f640882b59019556aad, type: 3}
-  _selectedSong: {fileID: 8300000, guid: b1041cf1e33bf6f418d39c57f8f53852, type: 3}
 --- !u!4 &1379772747
 Transform:
   m_ObjectHideFlags: 0

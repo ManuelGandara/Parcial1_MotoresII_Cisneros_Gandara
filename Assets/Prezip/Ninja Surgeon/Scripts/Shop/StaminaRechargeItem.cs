@@ -14,6 +14,11 @@ public class StaminaRechargeItem : Item
         return $"Spend ${Price} to recover ${_staminaRecovered} points of stamina?";
     }
 
+    protected override bool SatisfiesAdditionalBuyConditions()
+    {
+        return StaminaManager.Instance.DoesNotHaveMaxStamina();
+    }
+
     protected override void PurchaseAction()
     {
         StaminaManager.Instance.RechargeStamina(_staminaRecovered);
