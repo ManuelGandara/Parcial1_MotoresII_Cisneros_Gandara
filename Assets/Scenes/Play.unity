@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 32690503}
   - component: {fileID: 32690502}
   - component: {fileID: 32690501}
+  - component: {fileID: 32690505}
+  - component: {fileID: 32690504}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -205,19 +207,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 32690502}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 530154835}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: NextLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &32690502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +246,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32690499}
   m_CullTransparentMesh: 1
+--- !u!114 &32690504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32690499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc50020374cb44386a42b62b327486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playButton: {fileID: 32690501}
+  _loadingScreen: {fileID: 121572895}
+  _progressBar: {fileID: 121572896}
+--- !u!114 &32690505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32690499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13738728c08af8649870097f7a8224a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playScene: Play 1
+  _playCost: 0
 --- !u!1 &90853731
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +591,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4828008206702359166, guid: 01698358206d023439f2251c92e3778e, type: 3}
   m_PrefabInstance: {fileID: 121572893}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &121572896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6486565500581478636, guid: 01698358206d023439f2251c92e3778e, type: 3}
+  m_PrefabInstance: {fileID: 121572893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &275188440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,6 +1917,8 @@ GameObject:
   - component: {fileID: 736471657}
   - component: {fileID: 736471656}
   - component: {fileID: 736471655}
+  - component: {fileID: 736471659}
+  - component: {fileID: 736471658}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1957,19 +1989,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 736471656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 530154835}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartTheGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &736471656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2008,6 +2028,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736471653}
   m_CullTransparentMesh: 1
+--- !u!114 &736471658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736471653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc50020374cb44386a42b62b327486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playButton: {fileID: 736471655}
+  _loadingScreen: {fileID: 121572895}
+  _progressBar: {fileID: 121572896}
+--- !u!114 &736471659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736471653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13738728c08af8649870097f7a8224a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playScene: Play
+  _playCost: 10
 --- !u!1 &859886300
 GameObject:
   m_ObjectHideFlags: 0
