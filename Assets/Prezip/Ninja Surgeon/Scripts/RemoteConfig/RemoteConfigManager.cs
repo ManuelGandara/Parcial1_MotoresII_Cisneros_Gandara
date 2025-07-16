@@ -18,6 +18,7 @@ public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
     [SerializeField] private string _evilEyesLivesDecrease = "Int_Evil_Eyes_Lives_Decrease";
     [SerializeField] private string _evilEyesProbability = "Float_Evil_Eye_Probability";
     [SerializeField] private string _freezeDurationKey = "Float_Freeze_Duration";
+    [SerializeField] private string _livesIncreaseKey = "Int_Lives_Increase";
 
     public static RemoteConfigManager Instance;
 
@@ -86,6 +87,7 @@ public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
             StoreDiscount = Mathf.Max(0, remoteConfig.Value<float>(_storeDiscountKey)),
             MenuSong = remoteConfig.Value<string>(_menuSongKey),
             InitialLives = Mathf.Max(1, remoteConfig.Value<int>(_initialLivesKey)),
+            LivesIncrease = Mathf.Max(1, remoteConfig.Value<int>(_livesIncreaseKey)),
             FreezeDuration = Mathf.Max(1, remoteConfig.Value<float>(_freezeDurationKey)),
             EvilEyesLivesDecrease = Mathf.Max(0, remoteConfig.Value<int>(_evilEyesLivesDecrease)),
             EvilEyesProbability = Mathf.Clamp01(remoteConfig.Value<float>(_evilEyesProbability))

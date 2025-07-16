@@ -77,7 +77,7 @@ public class IceCube : MonoBehaviour
 
         foreach (GameObject obj in objectives)
         {
-            if (obj.TryGetComponent(out Rigidbody rb))
+            if (obj != null && obj.TryGetComponent(out Rigidbody rb))
             {
                 rb.constraints = RigidbodyConstraints.None;
                 rb.useGravity = true;

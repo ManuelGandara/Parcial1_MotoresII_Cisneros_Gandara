@@ -14,6 +14,8 @@ public struct RemoteConfigValues
 
     public string MenuSong;
 
+    public int LivesIncrease;
+
     public int InitialLives;
 
     public float FreezeDuration;
