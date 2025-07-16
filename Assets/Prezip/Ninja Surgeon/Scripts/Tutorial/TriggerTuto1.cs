@@ -10,6 +10,7 @@ public class TriggerTuto1 : MonoBehaviour
     {
         if (other.gameObject == tutorial.Eye)
         {
+            Debug.Log("collisiono con 1");
             tutorial.ShowMessage1();
         }
     }

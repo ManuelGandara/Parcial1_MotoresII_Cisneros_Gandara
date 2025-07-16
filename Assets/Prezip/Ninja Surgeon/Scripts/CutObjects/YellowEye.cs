@@ -6,7 +6,7 @@ public class YellowEye : MonoBehaviour
 {
     private GameManager gm;
     public int scorePoints;
-    public GameObject Eyes;
+    //public GameObject Eyes;
 
     private void OnTriggerEnter(Collider other)
     {

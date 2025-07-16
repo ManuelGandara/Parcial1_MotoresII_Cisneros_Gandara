@@ -1131,6 +1131,7 @@ GameObject:
   - component: {fileID: 558811316}
   - component: {fileID: 558811315}
   - component: {fileID: 558811317}
+  - component: {fileID: 558811318}
   m_Layer: 0
   m_Name: TriggerPause 2
   m_TagString: Untagged
@@ -1153,7 +1154,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1187,6 +1188,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 1218770936}
+--- !u!54 &558811318
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558811313}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &575561756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,6 +3664,7 @@ MonoBehaviour:
   _clips:
   - {fileID: 8300000, guid: 8ca10b1f79da2e14aa974e857a96578d, type: 3}
   - {fileID: 8300000, guid: 2694878fd0d7abc4abff261075ed9011, type: 3}
+  _sfxPitchDiff: 0.1
 --- !u!4 &1802946698
 Transform:
   m_ObjectHideFlags: 0
@@ -3948,6 +3977,7 @@ GameObject:
   - component: {fileID: 2141000973}
   - component: {fileID: 2141000972}
   - component: {fileID: 2141000974}
+  - component: {fileID: 2141000975}
   m_Layer: 0
   m_Name: TriggerPause 1
   m_TagString: Untagged
@@ -3970,7 +4000,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4004,6 +4034,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 1218770936}
+--- !u!54 &2141000975
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141000971}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2145988415
 GameObject:
   m_ObjectHideFlags: 0

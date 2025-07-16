@@ -82,7 +82,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4908,7 +4908,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePoints: 5
-  Eyes: {fileID: 0}
 --- !u!1001 &804170147826740065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4971,7 +4970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
       propertyPath: m_TagString
-      value: Blade
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5053,7 +5052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePoints: 5
-  Eyes: {fileID: 0}
 --- !u!4 &910365942571256970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1278bd53b684a6340a5c8f7cb8370f7a, type: 3}
@@ -5121,7 +5119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0beb63a4af5adfe41a19a496931b0601, type: 3}
       propertyPath: m_TagString
-      value: Blade
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
