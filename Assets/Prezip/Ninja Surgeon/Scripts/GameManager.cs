@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] public int score;
-    [SerializeField] public int lives;
+    private int lives;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public Image gameOverImage;
@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = 0;
+
+        lives = RemoteConfigManager.Instance.RemoteConfigValues.InitialLives;
 
         SetLivesText();
     }
@@ -119,7 +121,7 @@ public class GameManager : MonoBehaviour
     public void RestartTheGame()
     {
         score = 0;
-        lives = 3;
+        lives = RemoteConfigManager.Instance.RemoteConfigValues.InitialLives;
         gameIsOver = false;
         gameVictory = false;
 

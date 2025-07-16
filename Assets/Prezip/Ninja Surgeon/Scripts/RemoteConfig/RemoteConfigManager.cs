@@ -13,6 +13,7 @@ public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
     [SerializeField] private string _patchKey = "Float_Parche";
     [SerializeField] private string _versionTextKey = "String_Version";
     [SerializeField] private string _storeDiscountKey = "Float_Store_Discount";
+    [SerializeField] private string _initialLivesKey = "Int_Initial_Lives";
 
     public static RemoteConfigManager Instance;
 
@@ -78,7 +79,8 @@ public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
             Version = remoteConfig.Value<int>(_versionKey),
             Patch = remoteConfig.Value<float>(_patchKey),
             VersionText = remoteConfig.Value<string>(_versionTextKey),
-            StoreDiscount = Mathf.Max(0, remoteConfig.Value<float>(_storeDiscountKey))
+            StoreDiscount = Mathf.Max(0, remoteConfig.Value<float>(_storeDiscountKey)),
+            InitialLives = Mathf.Max(1, remoteConfig.Value<int>(_initialLivesKey))
         };
 
         _isReady = true;

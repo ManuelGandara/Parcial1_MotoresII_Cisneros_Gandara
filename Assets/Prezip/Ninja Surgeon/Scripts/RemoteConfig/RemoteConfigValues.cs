@@ -11,4 +11,6 @@ public struct RemoteConfigValues
     public string VersionText;
 
     public float StoreDiscount;
+
+    public int InitialLives;
 }
