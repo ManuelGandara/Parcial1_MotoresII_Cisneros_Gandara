@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class YellowEye : MonoBehaviour
 {
-    private GameManager gm;
     public int scorePoints;
     //public GameObject Eyes;
 
@@ -12,7 +11,7 @@ public class YellowEye : MonoBehaviour
     {
         if (other.tag == "Objective" /*|| other.gameObject.layer == 8*/)
         {
-            gm.UpdateTheScore(scorePoints);
+            GameManager.instance.UpdateTheScore(scorePoints);
             SFXManager.Instance.PlayClip(0);
             Destroy(gameObject);
         }

@@ -27,9 +27,23 @@ public class GameManager : MonoBehaviour
     public GameObject spawner2;
     public GameObject spawner3;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     void Start()
     {
         score = 0;
+
+        SetLivesText();
     }
 
     private void Update()
@@ -53,8 +67,8 @@ public class GameManager : MonoBehaviour
 
     public void UpdateLife(int LifeAdd)
     {
-        lives += lives + LifeAdd;
-        livesText.text = Mathf.Max(0, lives).ToString();
+        lives += LifeAdd;
+        SetLivesText();
     }
 
     public void UpdateLives()
@@ -62,7 +76,7 @@ public class GameManager : MonoBehaviour
         if (gameIsOver == false)
         {
             lives--;
-            livesText.text = "Lives " + Mathf.Max(0, lives).ToString();
+            SetLivesText();
 
             if (lives <= 0)
             {
@@ -110,7 +124,7 @@ public class GameManager : MonoBehaviour
         gameVictory = false;
 
         scoreText.text = score.ToString();
-        livesText.text = "Lives " + Mathf.Max(0, lives).ToString();
+        SetLivesText();
 
         gameOverImage.gameObject.SetActive(false);
         gameVictoryImage.gameObject.SetActive(false);
@@ -137,6 +151,11 @@ public class GameManager : MonoBehaviour
         {
             Victory();
         }
+    }
+
+    void SetLivesText()
+    {
+        livesText.text = "Lives " + Mathf.Max(0, lives).ToString();
     }
 }
 
