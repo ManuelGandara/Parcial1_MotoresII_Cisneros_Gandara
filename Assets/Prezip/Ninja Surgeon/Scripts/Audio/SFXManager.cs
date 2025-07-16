@@ -12,6 +12,9 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _clips;
+    [SerializeField] private float _sfxPitchDiff = 0.1f;
+
+    float _basePitch;
 
     private void Awake()
     {
@@ -32,6 +35,8 @@ public class SFXManager : MonoBehaviour
         {
             _audioSource = GetComponent<AudioSource>();
         }
+
+        _basePitch = _audioSource.pitch;
     }
 
     public void SetVolume(MixerGroup group, float value)
@@ -47,6 +52,8 @@ public class SFXManager : MonoBehaviour
         }
 
         _audioSource.clip = _clips[index];
+
+        _audioSource.pitch = _basePitch + Random.Range(-_sfxPitchDiff, _sfxPitchDiff);
 
         _audioSource.Play();
     }
