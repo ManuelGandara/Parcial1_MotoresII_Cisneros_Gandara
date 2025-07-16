@@ -15,4 +15,6 @@ public struct RemoteConfigValues
     public int InitialLives;
 
     public int EvilEyesLivesDecrease;
+
+    public float EvilEyesProbability;
 }

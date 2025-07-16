@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObjects : MonoBehaviour
 {
     public GameObject[] objects;
+    public GameObject evilEye;
     public float left;
     public float right;
 
@@ -26,9 +27,18 @@ public class SpawnObjects : MonoBehaviour
 
     private void InstantiateRandomObject()
     {
-        int objectIndex = Random.Range(0, objects.Length);
+        GameObject eye;
 
-        GameObject obj = Instantiate(objects[objectIndex], transform.position, objects[objectIndex].transform.rotation);
+        if (Random.Range(0f, 1f) > RemoteConfigManager.Instance.RemoteConfigValues.EvilEyesProbability)
+        {
+            eye = objects[Random.Range(0, objects.Length)];
+        }
+        else
+        {
+            eye = evilEye;
+        }
+
+        GameObject obj = Instantiate(eye, transform.position, eye.transform.rotation);
 
         obj.GetComponent<Rigidbody>().AddForce(RandomVector() * RandomForce(), ForceMode.Impulse);
 

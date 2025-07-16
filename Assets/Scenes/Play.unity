@@ -401,7 +401,7 @@ MonoBehaviour:
   - {fileID: 874157088611754009, guid: 01957c03c5bab0c44967936412908085, type: 3}
   - {fileID: 874157088611754009, guid: 9259f5a7bd004dd4d8e251e156055ed5, type: 3}
   - {fileID: 874157088611754009, guid: 6d514b1cd46407440ab3599be464704a, type: 3}
-  - {fileID: 2577550922841732518, guid: edce188073a2c9746909b099825882c0, type: 3}
+  evilEye: {fileID: 2577550922841732518, guid: edce188073a2c9746909b099825882c0, type: 3}
   left: 0
   right: 0.2
 --- !u!4 &275188442
@@ -881,7 +881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  lives: 3
   scoreText: {fileID: 1462423006}
   livesText: {fileID: 315568378}
   gameOverImage: {fileID: 674881152}
@@ -1259,7 +1258,7 @@ MonoBehaviour:
   - {fileID: 874157088611754009, guid: 01957c03c5bab0c44967936412908085, type: 3}
   - {fileID: 874157088611754009, guid: 9259f5a7bd004dd4d8e251e156055ed5, type: 3}
   - {fileID: 874157088611754009, guid: 6d514b1cd46407440ab3599be464704a, type: 3}
-  - {fileID: 2577550922841732518, guid: edce188073a2c9746909b099825882c0, type: 3}
+  evilEye: {fileID: 2577550922841732518, guid: edce188073a2c9746909b099825882c0, type: 3}
   left: -0.2
   right: 0
 --- !u!4 &608762214
@@ -2073,7 +2072,7 @@ MonoBehaviour:
   - {fileID: 874157088611754009, guid: 01957c03c5bab0c44967936412908085, type: 3}
   - {fileID: 874157088611754009, guid: 9259f5a7bd004dd4d8e251e156055ed5, type: 3}
   - {fileID: 874157088611754009, guid: 6d514b1cd46407440ab3599be464704a, type: 3}
-  - {fileID: 2577550922841732518, guid: edce188073a2c9746909b099825882c0, type: 3}
+  evilEye: {fileID: 2577550922841732518, guid: edce188073a2c9746909b099825882c0, type: 3}
   left: -0.2
   right: 0.2
 --- !u!4 &1174573390
