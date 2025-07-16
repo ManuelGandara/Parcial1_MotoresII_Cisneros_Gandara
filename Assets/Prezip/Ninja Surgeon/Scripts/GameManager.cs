@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = 0;
-        lives = 3;
     }
 
     private void Update()

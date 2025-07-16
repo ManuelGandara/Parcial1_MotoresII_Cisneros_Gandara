@@ -10,16 +10,16 @@ public class YellowEye : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Objective" || other.gameObject.layer == 8)
+        if (other.tag == "Objective" /*|| other.gameObject.layer == 8*/)
         {
             gm.UpdateTheScore(scorePoints);
             SFXManager.Instance.PlayClip(0);
             Destroy(gameObject);
         }
 
-        if (other.tag == "BottomTrigger")
+        /*if (other.tag == "BottomTrigger")
         {
             gm.UpdateLives();
-        }
+        }*/
     }
 }
