@@ -20,7 +20,14 @@ public class BadEyes : MonoBehaviour
             Destroy(gameObject);
             SFXManager.Instance.PlayClip(1);
             Instantiate(BadEyeParticle, transform.position, BadEyeParticle.transform.rotation);
-            FindObjectOfType<GameManager>().GameOver();
+            if (RemoteConfigManager.Instance.RemoteConfigValues.EvilEyesLivesDecrease > 0)
+            {
+                GameManager.instance.UpdateLife(-RemoteConfigManager.Instance.RemoteConfigValues.EvilEyesLivesDecrease);
+            }
+            else
+            {
+                GameManager.instance.GameOver();
+            }
         }
     }
 }

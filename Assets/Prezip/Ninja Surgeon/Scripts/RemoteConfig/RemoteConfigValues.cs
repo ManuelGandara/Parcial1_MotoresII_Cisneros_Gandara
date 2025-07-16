@@ -13,4 +13,6 @@ public struct RemoteConfigValues
     public float StoreDiscount;
 
     public int InitialLives;
+
+    public int EvilEyesLivesDecrease;
 }

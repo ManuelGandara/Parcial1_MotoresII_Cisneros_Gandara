@@ -14,6 +14,7 @@ public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
     [SerializeField] private string _versionTextKey = "String_Version";
     [SerializeField] private string _storeDiscountKey = "Float_Store_Discount";
     [SerializeField] private string _initialLivesKey = "Int_Initial_Lives";
+    [SerializeField] private string _evilEyesLivesDecrease = "Int_Evil_Eyes_Lives_Decrease";
 
     public static RemoteConfigManager Instance;
 
@@ -80,7 +81,8 @@ public class RemoteConfigManager : MonoBehaviour, IRequiredForStartup
             Patch = remoteConfig.Value<float>(_patchKey),
             VersionText = remoteConfig.Value<string>(_versionTextKey),
             StoreDiscount = Mathf.Max(0, remoteConfig.Value<float>(_storeDiscountKey)),
-            InitialLives = Mathf.Max(1, remoteConfig.Value<int>(_initialLivesKey))
+            InitialLives = Mathf.Max(1, remoteConfig.Value<int>(_initialLivesKey)),
+            EvilEyesLivesDecrease = Mathf.Max(0, remoteConfig.Value<int>(_evilEyesLivesDecrease))
         };
 
         _isReady = true;
