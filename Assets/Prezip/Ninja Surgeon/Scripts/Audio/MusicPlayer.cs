@@ -1,12 +1,24 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class MusicPlayer : MonoBehaviour
 {
-    [Header("Song")]
-    [SerializeField] private AudioClip _musicClip;
+    AudioSource _audioSource;
 
-    private void Start()
+    void Awake()
     {
-        MusicManager.Instance.PlayClip(_musicClip);
+        _audioSource = GetComponent<AudioSource>();
+
+        _audioSource.clip = IngameMusicManager.Instance.SelectedSong;
+    }
+
+    void Start()
+    {
+        if (!_audioSource.isPlaying)
+        {
+            _audioSource.Play();
+        }
+
+        _audioSource.loop = true;
     }
 }
