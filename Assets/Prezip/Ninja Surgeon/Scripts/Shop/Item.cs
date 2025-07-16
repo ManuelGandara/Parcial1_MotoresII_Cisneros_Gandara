@@ -27,5 +27,9 @@ public abstract class Item : MonoBehaviour
         PurchaseAction();
     }
 
+    public abstract string GetPopUpTitle();
+
+    public abstract string GetPopUpDescription();
+
     protected abstract void PurchaseAction();
 }

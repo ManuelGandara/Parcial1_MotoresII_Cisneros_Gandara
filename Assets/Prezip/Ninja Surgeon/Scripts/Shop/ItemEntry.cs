@@ -25,7 +25,7 @@ public class ItemEntry : MonoBehaviour
 
         _priceText.text = $"$ {_item.Price}";
 
-        _buyButton.onClick.AddListener(() => _shop.PurchaseItem(item));
+        _buyButton.onClick.AddListener(Buy);
 
         UpdateBuyConditions(null);
 
@@ -41,6 +41,11 @@ public class ItemEntry : MonoBehaviour
         _shop.OnPurchase -= UpdateBuyConditions;
 
         StoreManager.Instance.OnStoreStatusUpdate -= UpdateBuyConditions;
+    }
+
+    void Buy()
+    {
+        PopUp.Instance.LoadPopUp(_item.GetPopUpTitle(), _item.GetPopUpDescription(), () => _shop.PurchaseItem(_item));
     }
 
     void UpdateBuyConditions(object any)

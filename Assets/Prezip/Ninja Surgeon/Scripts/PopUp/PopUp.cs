@@ -46,6 +46,8 @@ public class PopUp : MonoBehaviour
     {
         Time.timeScale = 0;
 
+        _yesButton.onClick.RemoveAllListeners();
+
         _onAccept = () => {
             onAccept();
 
