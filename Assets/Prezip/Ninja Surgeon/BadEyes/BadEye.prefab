@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0237fd9cd3d708842b2b4d6cb5cf6b97, type: 2}
+      objectReference: {fileID: 2100000, guid: dc57e152f0a17644ab6544e52a26e4e5, type: 2}
     - target: {fileID: 919132149155446097, guid: fe3c88a306232aa41afeda7ff9f0e99a, type: 3}
       propertyPath: m_Name
       value: Ojo Normal
