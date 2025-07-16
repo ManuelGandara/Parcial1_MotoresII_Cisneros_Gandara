@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] public int score;
-    private int lives;
+    public int lives;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public Image gameOverImage;
@@ -124,6 +124,7 @@ public class GameManager : MonoBehaviour
         lives = RemoteConfigManager.Instance.RemoteConfigValues.InitialLives;
         gameIsOver = false;
         gameVictory = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         scoreText.text = score.ToString();
         SetLivesText();
@@ -136,7 +137,6 @@ public class GameManager : MonoBehaviour
 
         StaminaManager.Instance.ConsumeStamina(staminaPerPlay);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private IEnumerator GameOverSequence()
