@@ -10,6 +10,7 @@ public class ItemEntry : MonoBehaviour
 
     Item _item;
     Shop _shop;
+    Text _buyButtonText;
 
     public ItemEntry Build(Item item, Shop shop)
     {
@@ -25,7 +26,9 @@ public class ItemEntry : MonoBehaviour
 
         _priceText.text = $"$ {_item.Price}";
 
-        _buyButton.onClick.AddListener(() => _shop.PurchaseItem(item));
+        _buyButtonText = _buyButton.GetComponentInChildren<Text>();
+
+        _buyButton.onClick.AddListener(Buy);
 
         UpdateBuyConditions(null);
 
@@ -43,10 +46,15 @@ public class ItemEntry : MonoBehaviour
         StoreManager.Instance.OnStoreStatusUpdate -= UpdateBuyConditions;
     }
 
+    void Buy()
+    {
+        PopUp.Instance.LoadPopUp(_item.GetPopUpTitle(), _item.GetPopUpDescription(), () => _shop.PurchaseItem(_item));
+    }
+
     void UpdateBuyConditions(object any)
     {
-        _buyButton.enabled = _shop.CanBuyItem(_item);
+        _buyButton.enabled = _item.CanBuy();
 
-        _buyButton.GetComponentInChildren<Text>().text = _shop.ItemIsAvailable(_item) ? "Buy" : "Sold";
+        _buyButtonText.text = _item.WasSold() ? "Sold" : "Buy";
     }
 }

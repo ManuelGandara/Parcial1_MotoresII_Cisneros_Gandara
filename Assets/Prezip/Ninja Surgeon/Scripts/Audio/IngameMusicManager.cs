@@ -1,14 +1,18 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class IngameMusicManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] _availableSongs;
-    [SerializeField] private AudioClip _selectedSong;
+    [SerializeField] private List<AudioClip> _possibleSongs;
 
     public static IngameMusicManager Instance;
 
-    public AudioClip SelectedSong { get { return _selectedSong; } }
+    public AudioClip SelectedSong { get { return _storage.SelectedItem; } }
+
+    public List<AudioClip> AvailableSongs { get { return _storage.AvailableItems; } }
+
+    ItemStorage<AudioClip> _storage;
 
     void Awake()
     {
@@ -20,12 +24,29 @@ public class IngameMusicManager : MonoBehaviour
         {
             Instance = this;
 
+            _storage = new ItemStorage<AudioClip>
+            (
+                "IngameMusic",
+                new ObtainedItems(_possibleSongs.First().name),
+                (songName) => _possibleSongs.Find(song => song.name == songName)
+            );
+
             DontDestroyOnLoad(this);
         }
     }
 
-    public void SelectSong(string songName)
+    public bool HasSong(AudioClip song)
     {
-        _selectedSong = _availableSongs.Where(clip => clip.name == songName).FirstOrDefault();
+        return _storage.AvailableItems.Any(availableSong => availableSong.name == song.name);
+    }
+
+    public bool DoesNotHaveSong(AudioClip song)
+    {
+        return _storage.AvailableItems.All(availableSong => availableSong.name != song.name);
+    }
+
+    public void ObtainSong(AudioClip song)
+    {
+        _storage.ObtainItem(song, song.name);
     }
 }
